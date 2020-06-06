@@ -297,6 +297,11 @@ a:hover {
 	#HEADINGS, WITH AND WITHOUT LINK
 -------------------------------------*/
 
+h1,h2{
+	margin: 0;
+	padding: 0;
+}
+
 h1 a,
 h2 a,
 h3 a,

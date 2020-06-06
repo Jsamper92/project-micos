@@ -1,11 +1,11 @@
 @import 'settings/settings.scss';
 @import 'tools/tools.scss';
 @import 'generic/generic.scss';
+@import 'elements/elements.scss';
 @import 'components/components.scss';
 @import 'utilities/utilities.scss';
 
 
 body {
   font-family: $font_regular;
-  padding: 0 30px;
 }

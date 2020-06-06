@@ -1,0 +1,20 @@
+h1{
+    font-size: 58px;
+    color: $color_primary;
+    font-weight: 300;
+    & + span {
+        font-size: 40px;
+        color: $color_primary;
+        font-weight: 300;
+    }
+}
+
+h2{
+    font-size: 44px;
+    color: $color_orange;
+    font-weight: 300;
+}
+
+h3{
+    font-weight: 300;
+}

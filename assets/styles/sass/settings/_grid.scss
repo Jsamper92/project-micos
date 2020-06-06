@@ -14,8 +14,8 @@ $grid: (
 /// $pattern-design: Variable que establece el patrón de escritura a la hora de generar la grid
 /// @group grid
 $pattern-design: (
-  mobileFirst: false,
-  desktopFirst: true,
+  mobileFirst: true,
+  desktopFirst: false,
 );
 
 @each $key, $value in $pattern-design {

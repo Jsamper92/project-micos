@@ -1,0 +1,15 @@
+/// Mixin que controla el punto de ruptura en versión tablet
+/// @group responsive
+@mixin tablet {
+  @media only screen and (get-pattern(): get-scale($breakpoints, md)) {
+    @content;
+  }
+}
+/// Mixin que controla el punto de ruptura en versión desktop
+/// @group responsive
+
+@mixin desktop {
+  @media only screen and (get-pattern(): get-scale($breakpoints, lg)) {
+    @content;
+  }
+}

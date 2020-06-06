@@ -1,0 +1,29 @@
+/// Variable que define el criterio de la regla de las media queries. Por defecto será min-width. Valor modificable en función de la configuración establecida por $pattern-design
+/// @type any
+/// @group grid
+$pattern: min-width !default;
+
+/// $grid: Variable donde se definen los parametros de la grid
+/// @group grid
+
+$grid: (
+  col: 12,
+  gutter: 20px,
+);
+
+/// $pattern-design: Variable que establece el patrón de escritura a la hora de generar la grid
+/// @group grid
+$pattern-design: (
+  mobileFirst: false,
+  desktopFirst: true,
+);
+
+@each $key, $value in $pattern-design {
+  @if $key == mobileFirst and $value == true {
+    $pattern: mobileFirst;
+  } @else if $key == desktopFirst and $value == true {
+    $pattern: desktopFirst;
+  } @else {
+    $pattern: mobileFirst;
+  }
+}

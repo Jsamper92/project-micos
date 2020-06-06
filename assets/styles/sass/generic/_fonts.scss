@@ -1,0 +1,20 @@
+@import '../settings/settings.scss';
+
+body {
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+
+
+@mixin font-face($name,$file,$style,$weight){
+  @font-face {
+    font-family: $name;
+    font-display: auto;
+    src: url($font_Path + $file) format('truetype');
+    font-style: normal;
+    font-weight: $weight;
+  }
+}
+
+@include font-face('mg-regular','Delius-Regular.ttf' ,'normal' ,300);
+@include font-face('mg-swash-regular','DeliusSwashCaps-Regular.ttf' ,'normal' ,300);

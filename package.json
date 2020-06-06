@@ -4,7 +4,8 @@
   "description": "Guarderia Micos",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:sass": "sass --watch --style=compressed assets/styles/sass/main.scss:assets/styles/main.css"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Jsamper92/project-micos/issues"
   },
-  "homepage": "https://github.com/Jsamper92/project-micos#readme"
+  "homepage": "https://github.com/Jsamper92/project-micos#readme",
+  "dependencies": {
+    "sass": "^1.26.8"
+  }
 }

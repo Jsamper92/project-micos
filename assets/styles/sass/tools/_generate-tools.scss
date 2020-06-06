@@ -1,0 +1,100 @@
+/// Función donde nos devuelve el valor de la key de una lista
+/// @param {map} $list Argumento de tipo mapa
+/// @param {any} $level Argumento que define la key del mapa
+/// @return {map}
+/// @group function
+
+@function get-scale($list, $level) {
+  @return map-get($list, $level);
+}
+
+/// Función que convierte los pixeles en rem
+/// @param {number} $size Argumento de tipo número
+/// @return {number}
+/// @group function
+
+@function rem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+/// Función que devuelve que devuelve el patrón de escritura definido en la configuración
+/// @return {any}
+/// @example
+///   $pattern: max-width || min-width
+/// @group function
+@function get-pattern() {
+  @if $pattern == mobileFirst {
+    @return min-width;
+  } @else if $pattern == desktopFirst {
+    @return max-width;
+  } @else {
+    @return min-width;
+  }
+}
+
+/// Mixin que dada una lista de propiedades css te devuelve las propiedades en sintaxis css
+/// @param {map} $properties Lista que recorre y devuelve la key como propiedad y el value como valor
+/// @group tools
+@mixin set-properties($properties) {
+  @each $prop, $value in $properties {
+    #{$prop}: #{$value};
+  }
+}
+
+/// Mixin que dada un mapa genera selectores con sus respectivas propiedades css
+/// @param {map} $content Lista que recorre y devuelve la key como un selector
+/// @example
+///    h1 {
+///        font-family: font-regular;
+///        font-size: 17px;
+///    }
+///    @media only screen and (min-width: 768px) {
+///    h1 {
+///        font-family: font-regular;
+///        font-size: 20px;
+///    }
+///    }
+///    @media only screen and (min-width: 1200px) {
+///    h1 {
+///        font-family: font-regular;
+///        font-size: 24px;
+///    }
+///  }
+/// @group tools
+
+@mixin generate-selector($content) {
+  @each $selector, $responsive in $content {
+    #{$selector} {
+      @each $break, $properties in $responsive {
+        @if $break == xs {
+          @include set-properties($properties);
+        } @else if $break == md {
+          @include tablet {
+            @include set-properties($properties);
+          }
+        } @else {
+          @include desktop {
+            @include set-properties($properties);
+          }
+        }
+      }
+    }
+  }
+}
+
+/// Función que comprueba si dentro del arbol de $font-size-elements existe el selector html que nos interesa. Devuelve true en caso de que asi lo sea
+/// @param {map} $content Variable de tipo mapa
+/// @param {string} $element Variable de tipo string que define el selector a buscar
+/// @return {boolean}
+/// @example 
+///    set-exactly-selector($content, p)
+/// @group tools
+
+@function set-exactly-selector($content, $element) {
+  @each $selector, $properties in $content {
+    @if $selector == $element {
+      @return true;
+    }
+  }
+}

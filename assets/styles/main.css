@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'mg-regular';
+    font-display: auto;
+    src: url('/public/fonts/Delius-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+  }

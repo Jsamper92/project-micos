@@ -1,0 +1,19 @@
+{
+  "name": "project-micos",
+  "version": "1.0.0",
+  "description": "Guarderia Micos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jsamper92/project-micos.git"
+  },
+  "author": "Javier Samper Arias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jsamper92/project-micos/issues"
+  },
+  "homepage": "https://github.com/Jsamper92/project-micos#readme"
+}

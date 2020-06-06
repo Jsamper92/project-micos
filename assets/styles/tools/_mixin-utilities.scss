@@ -1,0 +1,24 @@
+
+
+@mixin format-text($size,$fontFamily,$color){
+  color: $color;
+  font-family: $fontFamily;
+  font-size: rem($size);
+}
+
+@mixin ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin gradient-style($orientation) {
+  background: linear-gradient(
+    to $orientation,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 44%,
+    rgba(254, 254, 254, 1) 78%,
+    rgba(237, 237, 237, 1) 100%
+  );
+}
+

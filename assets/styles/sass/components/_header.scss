@@ -1,9 +1,46 @@
 .header {
-    height: 385px;
+    height: auto;
     display: flex;
     position: relative;
     flex-direction: column;
     background-color: #99c343;
+
+    @include tablet {
+        height: 385px;
+    }
+
+    &__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;   
+    padding: 20px 0 150px 20px;
+
+    @include tablet {
+        margin-top: auto;
+        flex-direction: row;
+        
+        padding: 20px 0 50px 50px;
+    } 
+    }
+
+    %text-dinamic {
+        font-size: 44px;
+        color: $color_orange;
+        font-weight: 300;
+
+    }
+    #word{
+        @extend %text-dinamic;
+        position: relative;
+        margin-top: 50px;
+
+        & + span {
+            @extend %text-dinamic;
+            position: relative;
+            margin-top: 50px;
+            margin-right: 200px;
+        }
+    }
 
     @include tablet {
         height: 410px;
@@ -24,7 +61,7 @@
 
     &__nav{
         padding: 20px 0 0 20px;
-        background-color: white;
+        background-color: rgba(255,255,255);
         @include tablet {
             z-index: 9;
             width: 100%;
@@ -34,9 +71,7 @@
     }
 
     &__title{
-        padding: 20px 0 50px 50px;
-        @include tablet {
-            margin: auto 50px 20px auto;
-        }
+        margin-right: auto;
+        margin-bottom: 50px;
     }
 }

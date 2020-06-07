@@ -16,5 +16,17 @@ body {
   }
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?xpk5v3');
+  src:  url('fonts/icomoon.eot?xpk5v3#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?xpk5v3') format('truetype'),
+    url('fonts/icomoon.woff?xpk5v3') format('woff'),
+    url('fonts/icomoon.svg?xpk5v3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
 @include font-face('mg-regular','Delius-Regular.ttf' ,'normal' ,300);
 @include font-face('mg-swash-regular','DeliusSwashCaps-Regular.ttf' ,'normal' ,300);

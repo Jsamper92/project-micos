@@ -12,6 +12,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 @each $key, $value in $icons {
   .icon-#{$key}::before {
     content: $value;

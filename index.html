@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Micos | Escuela Infantil</title>
     <link rel="stylesheet" href="assets/styles/main.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="/assets/images/favicon.svg"
-    />
+    <link rel="icon" type="image/png" href="/assets/images/favicon.svg" />
   </head>
   <body>
     <header class="header">
@@ -19,24 +15,26 @@
         </figure>
       </nav>
 
-      <div class="header__title">
-        <h1>Micos</h1>
-        <span>Escuela Infantil</span>
+      <div class="header__container">
+        <div class="header__title">
+          <h1>Micos</h1>
+          <span>Escuela Infantil</span>
+        </div>
+        <div class="header__text--dinamic">
+          <span id="word"></span><span>|</span>
+        </div>
       </div>
       <span class="separator-1"></span>
     </header>
 
     <article class="article__about-our">
-      <h2>
-        Bienvenid@
-      </h2>
-
-      <p>
-        Nos ilusiona recibirte en nuestra Escuela que estamos seguros será un
-        segundo hogar acogedor, seguro y feliz para tu peque. Nuestra Escuela se
-        compromete a ser la mejor aliada de tu familia en esta etapa tan bonita
-        como importante. QUEREMOS FORMAR PARTE DE SUS RECUERDOS.
-      </p>
+      <div class="article__text">
+        <p>
+          Cerrado temporalmente por el Real Decreto 463/2020, por el que se
+          declara el etado de alarma para la gestión de la situación sanitaria
+          ocasionada.
+        </p>
+      </div>
     </article>
 
     <article class="article__contact">
@@ -57,12 +55,60 @@
           aria-hidden="false"
           tabindex="0"
         ></iframe>
+        <ul class="article__contact-list">
+          <li class="article__contact-item--location">
+            <figure class="article__contact-item--image">
+              <img src="assets/images/icons/phone.svg" alt="contact-phone" />
+            </figure>
+            <div class="article__contact-item--text">
+              <span>Dirección</span>
+              <span>Micos, Escuela Infantil</span>
+              <span>Calle Bulevar del Alto Tajo 40</span>
+              <span>19005 - Guadalajara</span>
+            </div>
+          </li>
+          <li class="article__contact-item--contact">
+            <figure class="article__contact-item--image">
+              <img src="assets/images/icons/mail.svg" alt="contact-mail">
+            </figure>
+            <div class="article__contact-item--text">
+              <span>Contacto & E-mail</span>
+              <span>949 298 586</span>
+              <span>info@micosguarderia.es</span>
+            </div>
+          </li>
+        </ul>
       </div>
     </article>
 
-    <footer>
+    <footer class="footer">
+      <div class="footer__container">
+        <figure class="footer__figure">
+          <img
+            src="assets/images/icons/micos_logo_text-white.svg"
+            alt="logo micos guarderia"
+            class="footer__img"
+          />
+        </figure>
 
+        <ul class="footer__list--location">
+          <li class="footer__item">Micos, Escuela Infantil</li>
+          <li class="footer__item">Calle Bulevar del Alto Tajo 40</li>
+          <li class="footer__item">19005 - Guadalajara</li>
+          <li class="footer__item">
+            <span>949 298 586</span>
+          </li>
+          <li class="footer__item">
+            <span>info@micosguarderia.es</span>
+          </li>
+        </ul>
+      </div>
+      <a class="footer__link" href="documents/Aviso-Legal.pdf" target="_blank"
+        >© Micos, Centro de Educación y Ocio Infantil en Guadalajara 2020 |
+        Aviso legal, política de privacidad y cookies</a
+      >
     </footer>
     <script src="scripts/scroll.js"></script>
+    <script src="scripts/text.js"></script>
   </body>
 </html>

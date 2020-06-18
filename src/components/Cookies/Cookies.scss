@@ -1,0 +1,38 @@
+@keyframes animation-cookies {
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    80%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100%{
+        display: none;
+        opacity: 0;
+    }
+}
+
+.c-cookies {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    z-index: 999;
+    position: absolute;
+    background-color: white;
+    &--accept{
+        animation: animation-cookies 1000ms forwards ease-in;
+    }
+    &__text{
+        font-size: 15px;
+    }
+
+    &__button{
+        margin-left: auto;
+        margin-right: 50px;
+    }
+}

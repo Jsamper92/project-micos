@@ -34,7 +34,6 @@ function Carousel(props) {
             }`}
             key={index}
           >
-            {elem.content}
 
           </div>
         );

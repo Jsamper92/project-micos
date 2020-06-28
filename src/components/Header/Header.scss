@@ -1,22 +1,29 @@
-@keyframes slie-in-out{
-    0%{
-        min-width: 0;
-    }
+.c-header {
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  position: absolute;
+  box-sizing: border-box;
+  &__nav {
+    margin-left: auto;
+  }
 
-    100%{
-        min-width: auto;
+  &__list {
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    text-align: left;
+    z-index: 99;
+    padding-top: 85px;
+    position: absolute;
+    padding-left: 20px;
+    background-color: red;
+    transform: translateX(100px);
+    transition: transform 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+    &.active {
+      transform: translateX(-100px);
     }
-}
-
-.c-header{
-    display: flex;
-    margin: 20px;
-    &__nav{
-        margin-left: auto;
-    }
-
-    &__list{
-
-        animation: slide-in-out 2s ease-in;
-    }
+  }
 }

@@ -8,9 +8,9 @@ import { useState } from 'react';
 export default function Header(props) {
 
     let [showMenu, setShowMenu] = useState(false);
+
     const openMenu = state => {
         setShowMenu(state);
-        
     }
     return (
         <header className="c-header">
@@ -24,14 +24,11 @@ export default function Header(props) {
                 </ul>
                 <MediaQuery maxDeviceWidth={768}>
                     <MenuMobile openMenu={openMenu} />
-                    {
-                        showMenu ?
-                            <ul className="c-header__list">
-                                <li className="c-header__item">fdffd</li>
-                            </ul>
-                            :
-                            null
-                    }
+
+                    <ul className={`c-header__list ${showMenu ? 'active' : ''}`}>
+                        <li className="c-header__item">fdffd</li>
+                    </ul>
+
                 </MediaQuery>
             </nav>
         </header>

@@ -1,3 +1,4 @@
+
 @keyframes animation-paginator {
     0%{
         width: 0;
@@ -15,12 +16,17 @@
     position: relative;
     transform: translate(40%,90%);
     &__item{
-        position: relative;
-        width: 70px;
+        width: 10px;
         height: 10px;
-        border-radius: 25px;
+        position: relative;
         margin-right: 20px;
+        border-radius: 50px;
         background-color: lightgray;
+        
+        @media (min-width:768px){
+            width: 70px;
+            border-radius: 25px;
+        }
     }
     &__line{
         left:0;
@@ -38,6 +44,7 @@
             border-radius: 25px;
             background-color:orange;
             animation: animation-paginator 2000ms  ease;
+            
         }
     }
 }

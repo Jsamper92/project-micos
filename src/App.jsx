@@ -1,6 +1,5 @@
 import React from 'react';
-import './App.css';
-import './sass/main.scss';
+import './App.scss';
 import Carousel from './components/Carousel/Carousel';
 import Header from './components/Header/Header';
 import Cookies from './components/Cookies/Cookies';
@@ -25,8 +24,8 @@ function App() {
 ]
   return (
     <div className="App">
-      <Header/>
-     {/*  <Carousel slides={slides}></Carousel> */}
+    <Header/> 
+     <Carousel slides={slides}></Carousel> 
       <Cookies></Cookies>
     </div>
   );

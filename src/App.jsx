@@ -25,8 +25,9 @@ function App() {
 ]
   return (
     <div className="App">
-      <Carousel slides={slides}></Carousel>
-      {/* <Cookies></Cookies> */}
+      <Header/>
+     {/*  <Carousel slides={slides}></Carousel> */}
+      <Cookies></Cookies>
     </div>
   );
 }

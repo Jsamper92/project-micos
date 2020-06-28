@@ -1,0 +1,22 @@
+@keyframes slie-in-out{
+    0%{
+        min-width: 0;
+    }
+
+    100%{
+        min-width: auto;
+    }
+}
+
+.c-header{
+    display: flex;
+    margin: 20px;
+    &__nav{
+        margin-left: auto;
+    }
+
+    &__list{
+
+        animation: slide-in-out 2s ease-in;
+    }
+}

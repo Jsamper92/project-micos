@@ -33,6 +33,7 @@ function Carousel(props) {
               currentIndex === index ? "active" : ""
             }`}
             key={index}
+            style={{backgroundColor:elem.color}}
           >
 
           </div>

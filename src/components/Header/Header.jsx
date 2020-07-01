@@ -1,6 +1,8 @@
 import React from 'react';
 import MediaQuery from 'react-responsive';
 import MenuMobile from '../Menu-hamburger/menuMobile';
+import logo from '../../assets/images/micos_logo.svg'
+
 
 import './Header.scss'
 import { useState } from 'react';
@@ -15,8 +17,7 @@ export default function Header(props) {
     return (
         <header className="c-header">
             <figure className="c-header__figure">
-                {/* <img src="" alt="" className="c-header__img" /> */}
-                soy el logo
+                <img src={logo} alt="" className="c-header__img" /> 
             </figure>
             <nav className="c-header__nav">
                 <ul className="c-header__list">

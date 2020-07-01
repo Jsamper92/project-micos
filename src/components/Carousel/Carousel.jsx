@@ -4,6 +4,23 @@ import Pagination from "../Pagination/Pagination";
 function Carousel(props) {
   let [currentIndex, setCurrentIndex] = useState(0);
   let slides = props.slides;
+
+  let slidess = [
+    {
+        color: 'brown',
+        background: 'gray',
+    },
+    {
+      color: 'gray',
+      background: 'grey',
+      content: 'vista 2'
+    },
+    {
+        color: 'orange',
+        background: 'orange',
+        content: 'no tengo contenido'
+    },
+]
   const nextSlide = () => {
     const lastIndex = slides.length - 1;
     const resetIndex = currentIndex === lastIndex;
@@ -18,7 +35,7 @@ function Carousel(props) {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 3000);
+    }, 5000);
     
     return (_) => clearInterval(interval);
   }, [currentIndex]);
@@ -39,7 +56,7 @@ function Carousel(props) {
           </div>
         );
       })}
-      <Pagination slides={slides} currentIndex={currentIndex} setIndex={setIndex}></Pagination>
+      <Pagination slides={slidess} currentIndex={currentIndex} setIndex={setIndex}></Pagination>
     </div>
   );
 }

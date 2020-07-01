@@ -10,11 +10,13 @@
 }
 
 .c-pagination{
-    z-index: 9;
+    top: 90%;
+    left: 35%;
+    z-index: 1;
     height: 100%;
     display: flex;
-    position: relative;
-    transform: translate(40%,90%);
+    position: absolute;
+
     &__item{
         width: 10px;
         height: 10px;

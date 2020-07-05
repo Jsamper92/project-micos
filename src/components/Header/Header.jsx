@@ -13,18 +13,6 @@ export default function Header(props) {
 
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
-  const slides = [
-    {
-      text: "Primer item",
-    },
-    {
-      text: "Segundo item",
-    },
-    {
-      text: "Tercer item",
-    },
-  ];
-
   const openMenu = (state) => {
     setShowMenu(state);
   };
@@ -56,7 +44,7 @@ export default function Header(props) {
         {isTabletOrMobile && <MenuMobile openMenu={openMenu} />}
 
         <ul className={`c-header__list ${showMenu ? "active" : ""}`}>
-          {slides.map((item, index) => {
+          {props.slides.map((item, index) => {
             return (
               <li
                 key={index}
@@ -64,7 +52,7 @@ export default function Header(props) {
                 className="c-header__item"
                 onClick={!isTabletOrMobile ? (e) => setUnderline(e) : null}
               >
-                {item.text}
+                {item.content}
               </li>
             );
           })}
@@ -81,7 +69,7 @@ export default function Header(props) {
                   }
                 : null
             }
-          ></span>
+          />
         )}
       </nav>
     </header>

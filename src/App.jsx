@@ -7,25 +7,25 @@ import Cookies from './components/Cookies/Cookies';
 function App() {
   let slides = [
     {
-        color: 'yellow',
-        background: 'gray',
-        content: <Header></Header>
+      color: 'yellow',
+      background: 'gray',
+      content: 'Primer item'
     },
     {
       color: 'red',
       background: 'grey',
-      content: 'vista 2'
+      content: 'Segundo item'
     },
     {
-        color: 'green',
-        background: 'orange',
-        content: 'no tengo contenido'
-    },
-]
+      color: 'green',
+      background: 'orange',
+      content: 'Tercer item'
+    }
+  ]
   return (
     <div className="App">
-    <Header/> 
-     <Carousel slides={slides}></Carousel> 
+      <Header slides={slides} />
+      <Carousel slides={slides}></Carousel>
       <Cookies></Cookies>
     </div>
   );

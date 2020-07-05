@@ -21,24 +21,25 @@ function Carousel(props) {
       content: 'no tengo contenido'
     },
   ]
-  const nextSlide = () => {
-    const lastIndex = slides.length - 1;
-    const resetIndex = currentIndex === lastIndex;
-    const index = resetIndex ? 0 : currentIndex + 1;
-    setCurrentIndex(index);
-  };
 
   const setIndex = index => {
     setCurrentIndex(parseInt(index));
   }
 
   useEffect(() => {
+    const nextSlide = () => {
+      const lastIndex = slides.length - 1;
+      const resetIndex = currentIndex === lastIndex;
+      const index = resetIndex ? 0 : currentIndex + 1;
+      setCurrentIndex(index);
+    };
+
     const interval = setInterval(() => {
       nextSlide();
     }, 5000);
 
     return (_) => clearInterval(interval);
-  }, [currentIndex]);
+  }, [currentIndex, slides.length]);
 
   return (
     <div className="c-carousel">
@@ -52,7 +53,6 @@ function Carousel(props) {
             key={index}
             style={{ backgroundColor: elem.color }}
           >
-
           </div>
         );
       })}

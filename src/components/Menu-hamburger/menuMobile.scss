@@ -1,12 +1,13 @@
 .menu {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  z-index: 9999;
+  top: 10px;
   padding: 0;
   width: 40px;
+  border: none;
   height: 40px;
+  z-index: 9999;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
   &:focus{
       background-color: transparent;
   }

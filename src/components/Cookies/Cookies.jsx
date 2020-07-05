@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Cookies.scss";
 
 export default function Cookies() {
@@ -17,7 +17,7 @@ export default function Cookies() {
     let getCookies = window.sessionStorage.getItem("cookies");
 
     return (
-        getCookies == 'false' ?
+        getCookies === 'false' ?
             <div className={`c-cookies ${className ? 'c-cookies--accept' : ''}`}>
                 <p className="c-cookies__text">
                     Este sitio web utiliza cookies para que usted tenga la mejor experiencia

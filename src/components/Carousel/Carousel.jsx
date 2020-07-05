@@ -7,8 +7,8 @@ function Carousel(props) {
 
   let slidess = [
     {
-        color: 'brown',
-        background: 'gray',
+      color: 'brown',
+      background: 'gray',
     },
     {
       color: 'gray',
@@ -16,11 +16,11 @@ function Carousel(props) {
       content: 'vista 2'
     },
     {
-        color: 'orange',
-        background: 'orange',
-        content: 'no tengo contenido'
+      color: 'orange',
+      background: 'orange',
+      content: 'no tengo contenido'
     },
-]
+  ]
   const nextSlide = () => {
     const lastIndex = slides.length - 1;
     const resetIndex = currentIndex === lastIndex;
@@ -36,7 +36,7 @@ function Carousel(props) {
     const interval = setInterval(() => {
       nextSlide();
     }, 5000);
-    
+
     return (_) => clearInterval(interval);
   }, [currentIndex]);
 
@@ -48,9 +48,9 @@ function Carousel(props) {
             id={index}
             className={`c-carousel__slide  ${
               currentIndex === index ? "active" : ""
-            }`}
+              }`}
             key={index}
-            style={{backgroundColor:elem.color}}
+            style={{ backgroundColor: elem.color }}
           >
 
           </div>

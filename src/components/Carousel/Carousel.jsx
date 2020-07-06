@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.scss";
 import Pagination from "../Pagination/Pagination";
+import ProgressBar from "../Progress-bar/ProgressBar";
 function Carousel(props) {
   let [currentIndex, setCurrentIndex] = useState(0);
   let slides = props.slides;

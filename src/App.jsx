@@ -2,7 +2,8 @@ import React from 'react';
 import './App.scss';
 import Carousel from './components/Carousel/Carousel';
 import Header from './components/Header/Header';
-import Cookies from './components/Cookies/Cookies';
+import Home from './pages/Home/Home';
+import Footer from './pages/Footer/Footer';
 
 function App() {
   let slides = [
@@ -25,8 +26,8 @@ function App() {
   return (
     <div className="App">
       <Header slides={slides} />
-      <Carousel slides={slides}></Carousel>
-      <Cookies></Cookies>
+      <Home slides={slides}/>
+      <Footer/>
     </div>
   );
 }

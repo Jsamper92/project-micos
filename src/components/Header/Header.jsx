@@ -17,10 +17,23 @@ export default function Header(props) {
     setShowMenu(state);
   };
 
+  const setColorUnderline = item => {
+    switch (item) {
+      case 'line-0':
+        return '#009ACB'
+      case 'line-1':
+        return '#8FB816'
+      case 'line-2':
+        return '#ECBE1F';
+      default:
+        return '#009ACB';
+    }
+  }
+
   const setUnderline = (props) => {
     const element = document.getElementById(props.target.id);
     const underline = {
-      color: "black",
+      color: setColorUnderline(props.target.id),
       left: element.getBoundingClientRect().left,
       width: element.offsetWidth,
     };
@@ -29,7 +42,7 @@ export default function Header(props) {
   };
   useEffect(() => {
     setLine({
-      color: "black",
+      color: setColorUnderline('line-0'),
       left: document.getElementById("line-0").getBoundingClientRect().left,
       width: document.getElementById("line-0").offsetWidth,
     });
@@ -63,10 +76,10 @@ export default function Header(props) {
             style={
               line
                 ? {
-                    backgroundColor: line.color,
-                    width: line.width,
-                    left: line.left,
-                  }
+                  backgroundColor: line.color,
+                  width: line.width,
+                  left: line.left,
+                }
                 : null
             }
           />

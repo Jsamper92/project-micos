@@ -30,6 +30,18 @@ export default function Header(props) {
     }
   }
 
+  const scaleHeader = () => {
+    const header = document.querySelector(".c-header");
+    document.addEventListener("scroll", (_) => {
+      if (window.scrollY >= 100) {
+        header.classList.add("scale-header-on");
+      } else {
+        header.classList.remove("scale-header-on");
+      }
+    });
+  }
+
+
   const setUnderline = (props) => {
     const element = document.getElementById(props.target.id);
     const underline = {
@@ -41,11 +53,14 @@ export default function Header(props) {
     setLine(underline);
   };
   useEffect(() => {
+    const element = document.getElementById("line-0");
     setLine({
       color: setColorUnderline('line-0'),
-      left: document.getElementById("line-0").getBoundingClientRect().left,
-      width: document.getElementById("line-0").offsetWidth,
+      left: element.getBoundingClientRect().left - 21.050,
+      width: element.offsetWidth,
     });
+
+    scaleHeader();
   }, []);
 
   return (

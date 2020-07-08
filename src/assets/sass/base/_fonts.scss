@@ -1,0 +1,11 @@
+@mixin font-face($name,$file,$style,$weight){
+    @font-face {
+      font-family: $name;
+      font-display: auto;
+      src: url($font_Path + $file);
+      font-style: normal;
+      font-weight: $weight;
+    }
+  }
+
+  @include font-face('lato-regular','Lato-Regular.ttf' ,'normal' ,300);

@@ -45,8 +45,7 @@
             position: absolute;
             border-radius: 25px;
             background-color:orange;
-            animation: animation-paginator 2000ms  ease;
-            
+            animation: animation-paginator 2000ms ease alternate;
         }
     }
 }

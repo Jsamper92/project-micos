@@ -2,6 +2,7 @@ import React from "react";
 
 import logo from "../../assets/images/micos_logo.svg";
 import "./Footer.scss";
+import Pdf from '../../assets/documents/Aviso-Legal.pdf';
 
 export default function Footer() {
   const literals = [
@@ -29,21 +30,23 @@ export default function Footer() {
 
   return (
     <div className="c-footer">
-      <figure className="c-footer__figure">
-        <img src={logo} alt="logo micos" className="c-footer__img" />
-      </figure>
-      <ul className="c-footer__text">
-        {literals.map((literal, index) => (
-          <li
-            key={index}
-            style={{ fontWeight: literal.weight }}
-            className="c-footer__item"
-          >
-            {literal.text}
-          </li>
-        ))}
-      </ul>
-      <a href="#" className="c-footer__link">
+      <div className="c-footer__container">
+        <figure className="c-footer__figure">
+          <img src={logo} alt="logo micos" className="c-footer__img" />
+        </figure>
+        <ul className="c-footer__text">
+          {literals.map((literal, index) => (
+            <li
+              key={index}
+              style={{ fontWeight: literal.weight }}
+              className="c-footer__item"
+            >
+              {literal.text}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <a href={Pdf} rel="noopener noreferrer" target="_blank" className="c-footer__link" title="micos">
         © Micos, Centro de Educación y Ocio Infantil en Guadalajara 2020 | Aviso
         legal, política de privacidad y cookies
       </a>

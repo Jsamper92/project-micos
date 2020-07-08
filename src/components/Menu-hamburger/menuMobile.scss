@@ -8,6 +8,7 @@
   cursor: pointer;
   position: relative;
   background-color: transparent;
+  transition: top .8s cubic-bezier(0.77, 0, 0.175, 1);
   &:focus{
       background-color: transparent;
   }

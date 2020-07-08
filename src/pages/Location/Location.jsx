@@ -2,19 +2,84 @@
 import React from 'react';
 import './Location.scss';
 
+import mail from '../../assets/images/icons/mail.svg';
+import phone from '../../assets/images/icons/phone.svg';
+
 export default function Location(props) {
+
+    const items = [
+        {
+            src: mail,
+            content: [
+                {
+                    text: 'Dirección'
+                },
+                {
+                    text: 'C.E.I Micos'
+                },
+                {
+                    text: 'Calle Bulevar del Alto Tajo 40'
+                },
+                {
+                    text: '19005 - Guadalajara'
+                }
+            ]
+        },
+        {
+            src: phone,
+            content: [
+                {
+                    text: 'Contacto & E-mail'
+                },
+                {
+                    text: '949 298 586'
+                },
+                {
+                    text: '675 733 140'
+                },
+                {
+                    text: 'info@micosguarderia.es'
+                }
+            ]
+        }
+    ]
     return (
         <div className="c-location">
-            <iframe
-                className="c-location__iframe"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.6066962327923!2d-3.1472123852191944!3d40.63855487933993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd43abaedbc59ee5%3A0x84057af6ee77ece0!2sMicos%20Guarder%C3%ADa!5e0!3m2!1ses!2ses!4v1591472762039!5m2!1ses!2ses"
-                frameBorder="0"
-                allowFullScreen=""
-                aria-hidden="false"
-                style={{border:0}}
-                tabIndex="0"
-                samesite="None"
-            ></iframe>
+            <p className="c-location__title">Información y reserva curso 2020/21</p>
+            <div className="c-location__container">
+                <iframe
+                    className="c-location__iframe"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.6066962327923!2d-3.1472123852191944!3d40.63855487933993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd43abaedbc59ee5%3A0x84057af6ee77ece0!2sMicos%20Guarder%C3%ADa!5e0!3m2!1ses!2ses!4v1591472762039!5m2!1ses!2ses"
+                    frameBorder="0"
+                    allowFullScreen=""
+                    aria-hidden="false"
+                    style={{ border: 0 }}
+                    tabIndex="0"
+                    samesite="None"
+                ></iframe>
+                <ul className="c-location__list">
+                    {
+                        items.map((item, index) => {
+                            return (
+                                <li key={index} className="c-location__item">
+                                    <figure className="c-location__figure">
+                                        <img src={item.src} alt="" className="c-location__img" />
+                                    </figure>
+                                    <div className="c-location__container--contact">
+                                        {
+                                            item.content.map((content, index) => {
+                                                return (
+                                                    <span key={index}>{content.text}</span>
+                                                )
+                                            })
+                                        }
+                                    </div>
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+            </div>
         </div>
     )
 }

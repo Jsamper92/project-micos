@@ -1,12 +1,13 @@
 .menu {
-  top: 10px;
+  top: 35px;
+  right: 35px;
   padding: 0;
   width: 40px;
   border: none;
   height: 40px;
   z-index: 9999;
   cursor: pointer;
-  position: relative;
+  position: fixed;
   background-color: transparent;
   transition: top .8s cubic-bezier(0.77, 0, 0.175, 1);
   &:focus{

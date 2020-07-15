@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.scss";
 import Pagination from "../Pagination/Pagination";
+import Welcome from "../../pages/Welcome/Welcome";
 function Carousel(props) {
   let [currentIndex, setCurrentIndex] = useState(0);
   let slides = props.slides;
@@ -9,6 +10,7 @@ function Carousel(props) {
     {
       color: 'brown',
       background: 'gray',
+      content: <Welcome/>
     },
     {
       color: 'gray',
@@ -51,8 +53,8 @@ function Carousel(props) {
               currentIndex === index ? "active" : ""
               }`}
             key={index}
-            style={{ backgroundColor: elem.color }}
           >
+            {elem.content}
           </div>
         );
       })}

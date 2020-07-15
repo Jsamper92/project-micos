@@ -56,7 +56,7 @@ export default function Header(props) {
     const element = document.getElementById("line-0");
     setLine({
       color: setColorUnderline('line-0'),
-      left: element.getBoundingClientRect().left - 21.050,
+      left: element.getBoundingClientRect().left,
       width: element.offsetWidth,
     });
 
@@ -64,13 +64,11 @@ export default function Header(props) {
   }, []);
 
   return (
-    <header className="c-header">
+    <header className={`c-header ${showMenu ? 'active' : null}`}>
       <figure className="c-header__figure">
         <img src={logo} alt="" className="c-header__img" />
       </figure>
       <nav className="c-header__nav">
-        {isTabletOrMobile && <MenuMobile openMenu={openMenu} />}
-
         <ul className={`c-header__list ${showMenu ? "active" : ""}`}>
           {props.slides.map((item, index) => {
             return (
@@ -80,13 +78,12 @@ export default function Header(props) {
                 className="c-header__item"
                 onClick={!isTabletOrMobile ? (e) => setUnderline(e) : null}
               >
-                {item.content}
+                {item.title}
               </li>
             );
           })}
         </ul>
-        {!isTabletOrMobile && (
-          <span
+        <span
             className="c-header__line"
             style={
               line
@@ -98,7 +95,7 @@ export default function Header(props) {
                 : null
             }
           />
-        )}
+        <MenuMobile openMenu={openMenu} />
       </nav>
     </header>
   );

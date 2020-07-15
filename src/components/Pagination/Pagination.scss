@@ -11,7 +11,7 @@
 
 .c-pagination{
     top: 90%;
-    left: 35%;
+    left: 50%;
     z-index: 1;
     height: 100%;
     display: flex;
@@ -26,7 +26,6 @@
         background-color: lightgray;
         
         @media (min-width:768px){
-            width: 70px;
             border-radius: 25px;
         }
     }

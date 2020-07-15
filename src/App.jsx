@@ -3,23 +3,32 @@ import './App.scss';
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import Footer from './pages/Footer/Footer';
+import Welcome from './pages/Welcome/Welcome';
+import Installation from './pages/Installation/Installation';
+import Services from './pages/Services/Services';
+import Contact from './pages/Contact/Contact';
 
 function App() {
   let slides = [
     {
       color: 'yellow',
-      background: 'gray',
-      content: 'Primer item'
+      title: 'QUIENES SOMOS',
+      content: <Welcome/>
     },
     {
       color: 'red',
-      background: 'grey',
-      content: 'Segundo item'
+      title: 'INSTALACIONES',
+      content: <Installation/>
     },
     {
       color: 'green',
-      background: 'orange',
-      content: 'Tercer item'
+      title: 'SERVICIOS',
+      content: <Services/>
+    },
+    {
+      color: 'green',
+      title: 'CONTACTO',
+      content: <Contact/>
     }
   ]
   return (

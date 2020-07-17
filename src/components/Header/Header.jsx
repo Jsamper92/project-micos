@@ -12,6 +12,26 @@ export default function Header(props) {
   let [line, setLine] = useState(null);
 
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
+
+  let slides = [
+    {
+      color: '#009ACB',
+      title: 'QUIENES SOMOS',
+    },
+    {
+      color: '#ECBE1F',
+      title: 'INSTALACIONES',
+    },
+    {
+      color: '#6ACA50',
+      title: 'SERVICIOS',
+    },
+    {
+      color: 'red',
+      title: 'CONTACTO',
+    }
+  ]
 
   const openMenu = (state) => {
     setShowMenu(state);
@@ -70,7 +90,7 @@ export default function Header(props) {
       </figure>
       <nav className="c-header__nav">
         <ul className={`c-header__list ${showMenu ? "active" : ""}`}>
-          {props.slides.map((item, index) => {
+          {slides.map((item, index) => {
             return (
               <li
                 key={index}
@@ -83,18 +103,20 @@ export default function Header(props) {
             );
           })}
         </ul>
-        <span
-            className="c-header__line"
-            style={
-              line
-                ? {
-                  backgroundColor: line.color,
-                  width: line.width,
-                  left: line.left,
-                }
-                : null
-            }
-          />
+
+        {isDesktop && <span
+          className="c-header__line"
+          style={
+            line
+              ? {
+                backgroundColor: line.color,
+                width: line.width,
+                left: line.left,
+              }
+              : null
+          }
+        />}
+
         <MenuMobile openMenu={openMenu} />
       </nav>
     </header>

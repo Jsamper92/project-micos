@@ -1,5 +1,5 @@
 .menu {
-  top: 35px;
+  top: 20px;
   right: 35px;
   padding: 0;
   width: 40px;
@@ -12,6 +12,10 @@
   transition: top .8s cubic-bezier(0.77, 0, 0.175, 1);
   &:focus{
       background-color: transparent;
+  }
+
+  @media (min-width: 1024px){
+    top: 35px;
   }
 }
 .line {

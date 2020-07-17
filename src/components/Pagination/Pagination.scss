@@ -10,18 +10,19 @@
 }
 
 .c-pagination{
-    top: 90%;
-    left: 50%;
+    top: 45%;
     z-index: 1;
+    right: 20px;
     height: 100%;
     display: flex;
     position: absolute;
+    flex-direction: column;
 
     &__item{
         width: 10px;
         height: 10px;
         position: relative;
-        margin-right: 20px;
+        margin-bottom: 20px;
         border-radius: 50px;
         background-color: lightgray;
         

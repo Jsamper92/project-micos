@@ -1,28 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.scss";
 import Pagination from "../Pagination/Pagination";
-import Welcome from "../../pages/Welcome/Welcome";
+
 function Carousel(props) {
   let [currentIndex, setCurrentIndex] = useState(0);
   let slides = props.slides;
-
-  let slidess = [
-    {
-      color: 'brown',
-      background: 'gray',
-      content: <Welcome/>
-    },
-    {
-      color: 'gray',
-      background: 'grey',
-      content: 'vista 2'
-    },
-    {
-      color: 'orange',
-      background: 'orange',
-      content: 'no tengo contenido'
-    },
-  ]
 
   const setIndex = index => {
     setCurrentIndex(parseInt(index));
@@ -58,7 +40,7 @@ function Carousel(props) {
           </div>
         );
       })}
-      <Pagination slides={slidess} currentIndex={currentIndex} setIndex={setIndex}></Pagination>
+      <Pagination slides={slides} currentIndex={currentIndex} setIndex={setIndex}></Pagination>
     </div>
   );
 }

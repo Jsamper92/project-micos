@@ -1,12 +1,17 @@
 import React from 'react';
 import background from '../../assets/images/Contacto.png';
 import './Contact.scss';
+import Title from '../../components/Title/Title';
 
 export default function Contact() {
+    const title = {
+        title: 'CONTACTO',
+        subtitle: ['949 298 586', '675 733 140', 'info@micosguarderia.es', 'Calle Bulevar del Alto Tajo 40', '19005 - Guadalajara'
+        ]
+    };
     return (
-        <div className="c-welcome" style={{backgroundImage: `url(${background})`, backgroundSize: 'cover'}}>
-            <h1 className="title">Contacto</h1>
-            <p className="subtitle">datos</p>
+        <div className="c-welcome" style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
+            <Title title={title} />
         </div>
     )
 }

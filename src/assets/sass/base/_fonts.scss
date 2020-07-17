@@ -8,4 +8,8 @@
     }
   }
 
-  @include font-face('lato-regular','Lato-Regular.ttf' ,'normal' ,300);
+  @include font-face($fredoka-regular,'FredokaOne-Regular.ttf' ,'normal' ,300);
+  @include font-face($lato-regular,'Lato-Regular.ttf' ,'normal' ,300);
+  @include font-face($JoseFinSans,'JosefinSans-VariableFont_wght.ttf' ,'normal' ,900);
+  @include font-face($JoseFinSans-regular,'JosefinSans-Regular.ttf' ,'normal' ,400);
+  @include font-face($JoseFinSans-bold,'JosefinSans-Bold.ttf' ,'normal' ,400);

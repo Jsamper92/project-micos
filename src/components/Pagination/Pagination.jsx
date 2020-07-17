@@ -4,6 +4,7 @@ export default function Pagination(props) {
   let slides = props.slides;
   let currentIndex = props.currentIndex;
 
+
   const setIndex = (index) => {
     props.setIndex(index);
   };

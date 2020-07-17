@@ -1,0 +1,31 @@
+.c-title {
+  color: white;
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  padding: 150px 30px;
+
+  @media (min-width: 768px) {
+    padding: 150px 50px;
+  }
+  &__main {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-family: "JoseFinSans-bold";
+
+    @media (min-width: 768px) {
+      font-size: 60px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 22px;
+    line-height: 1.5;
+    font-family: "JoseFinSans-regular";
+
+    @media (min-width: 768px) {
+      font-size: 27px;
+      margin-left: 27px;
+    }
+  }
+}

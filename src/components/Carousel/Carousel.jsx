@@ -39,7 +39,7 @@ function Carousel(props) {
             {elem.content}
           </div>
         );
-      })}
+      })} 
       <Pagination slides={slides} currentIndex={currentIndex} setIndex={setIndex}></Pagination>
     </div>
   );

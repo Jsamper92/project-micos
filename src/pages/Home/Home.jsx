@@ -5,6 +5,7 @@ import Installation from '../Installation/Installation';
 import Services from '../Services/Services';
 import Contact from '../Contact/Contact';
 import PopUp from '../../components/Pop-up/Pop-up';
+import Installations from '../Installation/Installations';
 
 
 
@@ -36,6 +37,7 @@ export default function Home(props) {
     return (
         <div className="c-home">
             <Carousel slides={slides}></Carousel>
+            <Installations/>
             <PopUp/>
         </div>
     )

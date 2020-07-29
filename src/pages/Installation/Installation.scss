@@ -1,7 +1,19 @@
 .c-installations{
-    padding: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     background-color: #ecbe1f;
+    
+    &__images{
+        padding: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__title{
+        color: white;
+        font-size: 44px;
+        padding-top: 40px;
+        text-align: center;
+        letter-spacing: 3px;
+        font-family: 'JoseFinSans-regular';
+    }
 }

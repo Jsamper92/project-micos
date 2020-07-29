@@ -1,6 +1,8 @@
 import React from 'react';
 import { mock } from '../../mocks/installation';
 import ImageBlock from '../../components/Image-block/Image-block';
+import Modal from '../../components/Modal/Modal';
+import { useState } from 'react';
 
 
 
@@ -67,18 +69,39 @@ export default function Installations() {
             text: 'EDIFICIO',
             id: 11
         }
-    ]
+    ];
+
+    const [currentImage, setCurrentImage] = useState(null);
+    const [activeModal, setActiveModal] = useState(false);
+
+    const closeModal = state => setActiveModal(state);
+
+    const openImage = image => {
+        setCurrentImage(image);
+        currentImage !== undefined ? setActiveModal(true) : setActiveModal(false);
+    };
+
     return (
-        <div className="c-installations">
+        <React.Fragment>
+
+            <div className="c-installations">
+                <p className="c-installations__title">INSTALACIONES</p>
+                <div className="c-installations__images">
+                    {
+                        images.map((image, index) => {
+                            return (
+                                <React.Fragment key={index}>
+                                    <ImageBlock installation={image} openImage={openImage} />
+                                </React.Fragment>
+                            )
+                        })
+                    }
+                </div>
+            </div>
             {
-                images.map((image, index) => {
-                    return (
-                        <span key={index}>
-                            <ImageBlock installation={image}/>
-                        </span>
-                    )
-                })
+                activeModal ? <Modal currentImage={currentImage} closeModal={closeModal} /> : null
             }
-        </div>
+
+        </React.Fragment>
     )
 }

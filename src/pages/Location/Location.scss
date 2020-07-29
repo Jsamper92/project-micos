@@ -1,5 +1,4 @@
 .c-location {
-  padding: 20px;
 
   &__container {
     display: flex;
@@ -15,8 +14,7 @@
     height: 300px;
 
     @media (min-width: 768px) {
-      width: 450px;
-      height: 450px;
+      height: 400px;
     }
   }
 
@@ -65,5 +63,7 @@
     margin: 40px 0;
     font-size: 44px;
     text-align: center;
+    letter-spacing: 3px;
+    font-family: 'JoseFinSans-regular';
   }
 }

@@ -5,6 +5,8 @@ export default function ImageBlock(props) {
     const { image, text, id } = props.installation;
     const [active, setActive] = useState(false);
 
+    const onMouse = state => setActive(state);
+
     const updatePosition = index => {
 
         const translate = percentage => {
@@ -23,11 +25,14 @@ export default function ImageBlock(props) {
             default:
                 break;
         }
-    }
+    };
 
-    const onMouse = state => setActive(state);
+    const returnImage = image => {
+        return props.openImage(image);
+    };
+
     return (
-        <div className={`c-image ${active ? 'active' : ''}`} onMouseEnter={() => onMouse(true)} onMouseLeave={() => onMouse(false)}>
+        <div className={`c-image ${active ? 'active' : ''}`} onClick={() => returnImage(image)} onMouseEnter={() => onMouse(true)} onMouseLeave={() => onMouse(false)}>
             <figure className="c-image__figure">
                 <img src={image} alt={`'instalacion-${props.key}'`} className="c-image__img" />
             </figure>

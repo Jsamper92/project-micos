@@ -6,6 +6,7 @@ import Services from '../Services/Services';
 import Contact from '../Contact/Contact';
 import PopUp from '../../components/Pop-up/Pop-up';
 import Installations from '../Installation/Installations';
+import Location from '../Location/Location';
 
 
 
@@ -14,18 +15,13 @@ export default function Home(props) {
     let slides = [
         {
           color: '#009ACB',
-          title: 'QUIENES SOMOS',
+          title: 'INICIO',
           content: <Welcome />
         },
         {
           color: '#ECBE1F',
           title: 'INSTALACIONES',
           content: <Installation />
-        },
-        {
-          color: '#6ACA50',
-          title: 'SERVICIOS',
-          content: <Services />
         },
         {
           color: 'red',
@@ -38,6 +34,7 @@ export default function Home(props) {
         <div className="c-home">
             <Carousel slides={slides}></Carousel>
             <Installations/>
+            <Location/>
             <PopUp/>
         </div>
     )

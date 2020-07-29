@@ -17,7 +17,7 @@ export default function Header(props) {
   let slides = [
     {
       color: '#009ACB',
-      title: 'QUIENES SOMOS',
+      title: 'INICIO',
     },
     {
       color: '#ECBE1F',
@@ -45,6 +45,8 @@ export default function Header(props) {
         return '#8FB816'
       case 'line-2':
         return '#ECBE1F';
+      case 'line-3':
+        return 'red';
       default:
         return '#009ACB';
     }

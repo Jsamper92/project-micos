@@ -2,14 +2,12 @@
 import React from 'react';
 import './Location.scss';
 
-import mail from '../../assets/images/icons/mail.svg';
-import phone from '../../assets/images/icons/phone.svg';
 
 export default function Location(props) {
 
     const items = [
         {
-            src: mail,
+            src: 'mail',
             content: [
                 {
                     text: 'Dirección'
@@ -26,7 +24,7 @@ export default function Location(props) {
             ]
         },
         {
-            src: phone,
+            src: 'phone',
             content: [
                 {
                     text: 'Contacto & E-mail'
@@ -45,7 +43,7 @@ export default function Location(props) {
     ]
     return (
         <div className="c-location">
-            <p className="c-location__title">Información y reserva curso 2020/21</p>
+            <p className="c-location__title">CONTACTO</p>
             <div className="c-location__container">
                 <iframe
                     className="c-location__iframe"
@@ -57,7 +55,7 @@ export default function Location(props) {
                     tabIndex="0"
                     samesite="None"
                 ></iframe>
-                <ul className="c-location__list">
+{/*                 <ul className="c-location__list">
                     {
                         items.map((item, index) => {
                             return (
@@ -78,7 +76,7 @@ export default function Location(props) {
                             )
                         })
                     }
-                </ul>
+                </ul> */}
             </div>
         </div>
     )

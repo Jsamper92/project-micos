@@ -34,6 +34,7 @@ export default function Home(props) {
         <div className="c-home">
             <Carousel slides={slides}></Carousel>
             <Installations/>
+            <Services/>
             <Location/>
             <PopUp/>
         </div>

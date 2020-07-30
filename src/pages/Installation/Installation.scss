@@ -1,19 +1,22 @@
-.c-installations{
-    background-color: #ecbe1f;
-    
-    &__images{
-        padding: 50px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+.c-installations {
+  background-color: #ecbe1f;
 
-    &__title{
-        color: white;
-        font-size: 44px;
-        padding-top: 40px;
-        text-align: center;
-        letter-spacing: 3px;
-        font-family: 'JoseFinSans-regular';
+  &__images {
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 30px;
+    color: white;
+    padding-top: 40px;
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: "JoseFinSans-regular";
+    @media (min-width: 768px) {
+      font-size: 44px;
     }
+  }
 }

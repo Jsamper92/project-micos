@@ -1,53 +1,73 @@
 @keyframes appereance {
-    0%{
-        transform: scale(0);
-    }
+  0% {
+    transform: scale(0);
+  }
 
-    100%{
-        transform: scale(1);
-    }
+  100% {
+    transform: scale(1);
+  }
 }
-
 
 .c-modal {
-    top: 10%;
-    left: 25%;
-    width: 45%;
-    height: 70vh;
-    position: fixed;
-    z-index: 9999999;
-    border-radius: 10px;
-    border: 25px solid white;
-    animation: appereance .4s ease alternate;
-
-    &__figure{
-        width: 100%;
-        height: 100%;
-    }
-
-    &__img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    &__close{
-        top: -25px;
-        right: -22px;
-        font-size: 20px;
-        position: absolute;
-        border: navajowhite;
-        background-color: transparent;
-    }
-}
-
-.overlay{
-    top: 0;
     left: 0;
+  top: 20px;
+  width: auto;
+  height: 500px;
+  position: fixed;
+  z-index: 9999999;
+  border-radius: 10px;
+  border: 25px solid white;
+  animation: appereance 0.4s ease alternate;
+
+  @media (min-width: 768px) {
+    left: 13%;
+    width: 500px;
+  }
+
+  @media (min-width: 1024px) {
+    left: 20%;
+    width: 500px;
+  }
+
+  @media (min-width: 1200px) {
+    left: 25%;
+    width: 500px;
+  }
+
+  @media (min-width: 1440px) {
+    left: 30%;
+    width: 500px;
+  }
+
+  &__figure {
     width: 100%;
     height: 100%;
-    opacity: 0.7;
-    position: fixed;
-    z-index: 9999998;
-    background-color: gray;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__close {
+    top: -25px;
+    right: -22px;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    border: navajowhite;
+    background-color: transparent;
+  }
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  position: fixed;
+  z-index: 9999998;
+  background-color: gray;
 }

@@ -10,21 +10,6 @@ export default function Installations() {
 
     const images = [
         {
-            image: mock[1],
-            text: 'AULA 1/2 AÑOS',
-            id: 0
-        },
-        {
-            image: mock[2],
-            text: 'AULA 1/2 AÑOS',
-            id: 1
-        },
-        {
-            image: mock[3],
-            text: 'AULA 1/2 AÑOS',
-            id: 2
-        },
-        {
             image: mock[5],
             text: 'AULA 1/2 AÑOS',
             id: 3
@@ -53,6 +38,21 @@ export default function Installations() {
             image: mock[10],
             text: 'COMEDOR',
             id: 8
+        },
+        {
+            image: mock[1],
+            text: 'AULA 1/2 AÑOS',
+            id: 0
+        },
+        {
+            image: mock[2],
+            text: 'AULA 1/2 AÑOS',
+            id: 1
+        },
+        {
+            image: mock[3],
+            text: 'AULA 1/2 AÑOS',
+            id: 2
         },
         {
             image: mock[12],
@@ -84,7 +84,7 @@ export default function Installations() {
     return (
         <React.Fragment>
 
-            <div className="c-installations">
+            <div className="c-installations" id="instalations-section">
                 <p className="c-installations__title">INSTALACIONES</p>
                 <div className="c-installations__images">
                     {

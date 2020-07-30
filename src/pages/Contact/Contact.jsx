@@ -10,7 +10,7 @@ export default function Contact() {
         ]
     };
     return (
-        <div className="c-welcome" style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
+        <div id="welcome-section" className="c-welcome" style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
             <Title title={title} />
         </div>
     )

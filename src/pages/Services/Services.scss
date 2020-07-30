@@ -1,0 +1,93 @@
+.c-services {
+  padding: 0px 50px 50px;
+
+  &__link {
+    flex: 1 1 70px;
+    display: block;
+    font-size: 15px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    margin: 10px 10px 10px 0;
+    color: rgb(221, 133, 0);
+    transition: color 0.5s ease;
+    padding: 15px 50px 15px 40px;
+    background-color: transparent;
+    font-family: "JoseFinSans-regular";
+    border: 2px solid rgb(221, 133, 0);
+    &:hover {
+      color: white;
+      & > i > svg {
+        fill: white;
+      }
+      &::after {
+        left: 0;
+      }
+    }
+    & > i {
+      top: 10px;
+      left: 10px;
+      width: 5px;
+      height: 5px;
+      display: block;
+      position: absolute;
+      & > svg {
+        fill: rgb(221, 133, 0);
+        transition: fill 0.5s ease;
+      }
+    }
+    &::after {
+      content: "";
+      top: 0;
+      z-index: -1;
+      width: 100%;
+      left: -500px;
+      height: 100%;
+      display: block;
+      position: absolute;
+      background-color: #dd8500;
+      transition: left 0.5s ease;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    margin: 40px 0;
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: "JoseFinSans-regular";
+
+    @media (min-width:768px){
+      font-size: 44px;
+    }
+  }
+
+  &__container {
+    &--text {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &--menu {
+      display: grid;
+      margin: 20px 0;
+      flex-wrap: wrap;
+      grid-gap: 30px 10px;
+      justify-content: space-evenly;
+      grid-template-columns: repeat(1, 250px);
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(4, 160px);
+      }
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(6, 160px);
+      }
+    }
+  }
+
+  &__text {
+    line-height: 1.5;
+    margin-bottom: 30px;
+    letter-spacing: 1.4px;
+  }
+}

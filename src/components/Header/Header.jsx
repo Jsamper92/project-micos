@@ -52,6 +52,32 @@ export default function Header(props) {
     }
   }
 
+  const getId = target => document.getElementById(target);
+
+  const scrollTo = (element) => {
+    let top;
+    switch (element) {
+      case 'INICIO':
+        top = getId('welcome-section').offsetTop;
+        window.scroll({ top: top - 100, behavior: 'smooth' });
+        break;
+      case 'INSTALACIONES':
+        top = getId('instalations-section').offsetTop;
+        window.scroll({ top: top - 100, behavior: 'smooth' });
+        break;
+      case 'CONTACTO':
+        top = getId('location-section').offsetTop;
+        window.scroll({ top: top - 130, behavior: 'smooth' });
+        break;
+      case 'SERVICIOS':
+        top = getId('services-section').offsetTop;
+        window.scroll({ top: top - 130, behavior: 'smooth' });
+        break;
+      default:
+        break;
+    }
+  }
+
   const scaleHeader = () => {
     const header = document.querySelector(".c-header");
     document.addEventListener("scroll", (_) => {
@@ -65,6 +91,8 @@ export default function Header(props) {
 
 
   const setUnderline = (props) => {
+    const text = props.target.textContent;
+    scrollTo(text);
     const element = document.getElementById(props.target.id);
     const underline = {
       color: setColorUnderline(props.target.id),
@@ -98,7 +126,7 @@ export default function Header(props) {
                 key={index}
                 id={`line-${index}`}
                 className="c-header__item"
-                onClick={!isTabletOrMobile ? (e) => setUnderline(e) : null}
+                onClick={(e) => setUnderline(e)}
               >
                 {item.title}
               </li>

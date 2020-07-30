@@ -42,7 +42,7 @@ export default function Location(props) {
         }
     ]
     return (
-        <div className="c-location">
+        <div id="location-section" className="c-location">
             <p className="c-location__title">CONTACTO</p>
             <div className="c-location__container">
                 <iframe

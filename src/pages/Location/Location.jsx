@@ -3,44 +3,8 @@ import React from 'react';
 import './Location.scss';
 
 
-export default function Location(props) {
+export default function Location() {
 
-    const items = [
-        {
-            src: 'mail',
-            content: [
-                {
-                    text: 'Dirección'
-                },
-                {
-                    text: 'C.E.I Micos'
-                },
-                {
-                    text: 'Calle Bulevar del Alto Tajo 40'
-                },
-                {
-                    text: '19005 - Guadalajara'
-                }
-            ]
-        },
-        {
-            src: 'phone',
-            content: [
-                {
-                    text: 'Contacto & E-mail'
-                },
-                {
-                    text: '949 298 586'
-                },
-                {
-                    text: '675 733 140'
-                },
-                {
-                    text: 'info@micosguarderia.es'
-                }
-            ]
-        }
-    ]
     return (
         <div id="location-section" className="c-location">
             <p className="c-location__title">CONTACTO</p>

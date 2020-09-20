@@ -118,13 +118,43 @@ body{
     cursor: pointer;
     font-size: 12px;
     position: relative;
+    width: max-content;
     margin-bottom: 20px;
     white-space: nowrap;
+
+    & > span {
+      position: absolute;
+      left: 0;
+      width: 0%;
+      bottom: -5px;
+      height: 3px;
+      position: absolute;
+      transition: width ease-in-out 500ms;
+    }
+
+/*     &::before{
+      content: '';
+      width: 0%;
+      bottom: -5px;
+      height: 3px;
+      position: absolute;
+      background-color: red;
+      transition: width ease-in-out 500ms;
+    } */
+    &:focus{
+      & > span{
+        width: 100%;
+      }
+    }
 
     @media (min-width: 1024px) {
       font-size: 16px;
       margin: 0 0 0 40px;
       text-transform: capitalize;
+
+      & > span{
+        display: none;
+      }
     }
   }
 

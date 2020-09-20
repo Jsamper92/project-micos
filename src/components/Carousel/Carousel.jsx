@@ -5,7 +5,6 @@ import Pagination from "../Pagination/Pagination";
 function Carousel(props) {
   let [currentIndex, setCurrentIndex] = useState(0);
   let slides = props.slides;
-
   const setIndex = index => {
     setCurrentIndex(parseInt(index));
   }
@@ -23,7 +22,7 @@ function Carousel(props) {
     }, 5000);
 
     return (_) => clearInterval(interval);
-  }, [currentIndex, slides.length]);
+  }, [currentIndex]);
 
   return (
     <div className="c-carousel">
@@ -32,7 +31,7 @@ function Carousel(props) {
           <div
             id={index}
             className={`c-carousel__slide  ${
-              currentIndex === index ? "active" : ""
+              currentIndex === index  ? "active" : ""
               }`}
             key={index}
           >

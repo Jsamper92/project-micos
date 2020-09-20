@@ -11,7 +11,6 @@ export default function Header(props) {
 
   let [line, setLine] = useState(null);
 
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
 
   let slides = [
@@ -20,12 +19,12 @@ export default function Header(props) {
       title: 'INICIO',
     },
     {
-      color: '#ECBE1F',
-      title: 'INSTALACIONES',
-    },
-    {
       color: '#6ACA50',
       title: 'SERVICIOS',
+    },
+    {
+      color: '#ECBE1F',
+      title: 'INSTALACIONES',
     },
     {
       color: 'red',
@@ -123,12 +122,14 @@ export default function Header(props) {
           {slides.map((item, index) => {
             return (
               <li
+                tabIndex={index}
                 key={index}
                 id={`line-${index}`}
                 className="c-header__item"
                 onClick={(e) => setUnderline(e)}
               >
                 {item.title}
+                <span style={{backgroundColor: setColorUnderline(`line-${index}`)}}></span>
               </li>
             );
           })}

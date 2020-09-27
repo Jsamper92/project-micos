@@ -13,15 +13,16 @@ export default function ImageBlock(props) {
             return `translate(${percentage}%, 42px)`
         }
         switch (index) {
-
             case 7:
-                return translate(90);
+                return translate(80);
             case 8:
                 return translate(60);
             case 9:
-                return translate(16);
+                return translate(15);
+            case 10:
+                return translate(30);
             case 11:
-                return translate(70);
+                return translate(80);
             default:
                 break;
         }

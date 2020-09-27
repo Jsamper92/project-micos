@@ -77,16 +77,25 @@ export default function Header(props) {
     }
   }
 
-  const scaleHeader = () => {
-    const header = document.querySelector(".c-header");
+  const setAnimationScroll = (target, className, px) => {
     document.addEventListener("scroll", (_) => {
-      if (window.scrollY >= 100) {
-        header.classList.add("scale-header-on");
+      if (window.scrollY >= px) {
+        target.classList.add(className);
       } else {
-        header.classList.remove("scale-header-on");
+        target.classList.remove(className);
       }
     });
+  };
+
+  const scaleHeader = () => {
+    const header = document.querySelector(".c-header");
+    const overlay = document.querySelector(".overlay");
+
+    setAnimationScroll(overlay,'overlay--white', 599);
+    setAnimationScroll(header,'scale-header-on',599);
   }
+
+
 
 
   const setUnderline = (props) => {
@@ -113,43 +122,46 @@ export default function Header(props) {
   }, []);
 
   return (
-    <header className={`c-header ${showMenu ? 'active' : null}`}>
-      <figure className="c-header__figure">
-        <img src={logo} alt="" className="c-header__img" />
-      </figure>
-      <nav className="c-header__nav">
-        <ul className={`c-header__list ${showMenu ? "active" : ""}`}>
-          {slides.map((item, index) => {
-            return (
-              <li
-                tabIndex={index}
-                key={index}
-                id={`line-${index}`}
-                className="c-header__item"
-                onClick={(e) => setUnderline(e)}
-              >
-                {item.title}
-                <span style={{backgroundColor: setColorUnderline(`line-${index}`)}}></span>
-              </li>
-            );
-          })}
-        </ul>
+    <React.Fragment>
+      <span className="overlay"></span>
+      <header className={`c-header ${showMenu ? 'active' : null}`}>
+        <figure className="c-header__figure">
+          <img src={logo} alt="" className="c-header__img" />
+        </figure>
+        <nav className="c-header__nav">
+          <ul className={`c-header__list ${showMenu ? "active" : ""}`}>
+            {slides.map((item, index) => {
+              return (
+                <li
+                  tabIndex={index}
+                  key={index}
+                  id={`line-${index}`}
+                  className="c-header__item"
+                  onClick={(e) => setUnderline(e)}
+                >
+                  {item.title}
+                  <span style={{ backgroundColor: setColorUnderline(`line-${index}`) }}></span>
+                </li>
+              );
+            })}
+          </ul>
 
-        {isDesktop && <span
-          className="c-header__line"
-          style={
-            line
-              ? {
-                backgroundColor: line.color,
-                width: line.width,
-                left: line.left,
-              }
-              : null
-          }
-        />}
+          {isDesktop && <span
+            className="c-header__line"
+            style={
+              line
+                ? {
+                  backgroundColor: line.color,
+                  width: line.width,
+                  left: line.left,
+                }
+                : null
+            }
+          />}
 
-        <MenuMobile openMenu={openMenu} />
-      </nav>
-    </header>
+          <MenuMobile openMenu={openMenu} />
+        </nav>
+      </header>
+    </React.Fragment>
   );
 }

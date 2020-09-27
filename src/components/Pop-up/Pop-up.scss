@@ -26,7 +26,7 @@
   position: fixed;
   right: -300px;
   transition: right 1s ease;
-  animation: jump 1.2s ease-out infinite alternate;
+  animation: jump 1.2s ease-out alternate infinite;
 
   &:focus{
       outline: none;

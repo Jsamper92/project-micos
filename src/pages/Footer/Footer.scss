@@ -91,4 +91,8 @@
       }
     }
   }
+
+  & span {
+    @extend %format-text;
+  }
 }

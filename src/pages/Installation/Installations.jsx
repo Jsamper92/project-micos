@@ -30,9 +30,9 @@ export default function Installations() {
             id: 6
         },
         {
-            image: mock[9],
-            text: 'COCINA',
-            id: 7
+            image: mock[13],
+            text: 'BAÑOS AULAS',
+            id: 10
         },
         {
             image: mock[10],
@@ -60,9 +60,9 @@ export default function Installations() {
             id: 9
         },
         {
-            image: mock[13],
-            text: 'BAÑOS AULAS',
-            id: 10
+            image: mock[9],
+            text: 'EDIFICIO',
+            id: 7
         },
         {
             image: mock[14],

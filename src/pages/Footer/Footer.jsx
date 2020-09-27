@@ -86,8 +86,9 @@ export default function Footer() {
         ))}
       </div>
       <div className="c-footer__container--link">
+        <span>© Micos, Centro de Educación y Ocio Infantil en Guadalajara 2020 </span>
         <a href={Pdf} rel="noopener noreferrer" target="_blank" className="c-footer__link" title="micos">
-          © Micos, Centro de Educación y Ocio Infantil en Guadalajara 2020 | Aviso
+          | Aviso
           legal, política de privacidad y cookies
         </a>
         {

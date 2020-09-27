@@ -8,11 +8,11 @@ import aula_6 from '../assets/images/instalaciones/aula_6.jpg';
 import aula_7 from '../assets/images/instalaciones/aula_7.jpg';
 import aula_8 from '../assets/images/instalaciones/aula_8.jpg';
 import bano from '../assets/images/instalaciones/bano.jpg';
-import jardin from '../assets/images/instalaciones/jardin.jpg';
-import cocina from '../assets/images/instalaciones/cocina.jpg';
+import jardin from '../assets/images/instalaciones/jardin-2.jpg';
+import fachada1 from '../assets/images/instalaciones/fachada-2.jpg';
 import comedor from '../assets/images/instalaciones/comedor.jpg';
 import comedor_1 from '../assets/images/instalaciones/comedor_1.jpg';
-import fachada from '../assets/images/instalaciones/fachada.jpg';
+import fachada from '../assets/images/instalaciones/fachada-1.jpg';
 
 
 export const mock = [
@@ -25,7 +25,7 @@ export const mock = [
     aula_6,
     aula_7,
     aula_8,
-    cocina,
+    fachada1,
     comedor,
     comedor_1,
     jardin,

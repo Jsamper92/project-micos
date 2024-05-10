@@ -6,7 +6,7 @@ import Title from '../../components/Title/Title';
 export default function Contact() {
     const title = {
         title: 'CONTACTO',
-        subtitle: ['949 298 586', '675 733 140', 'info@micosguarderia.es', 'Calle Bulevar del Alto Tajo 40', '19005 - Guadalajara'
+        subtitle: ['675 733 140', 'info@micosguarderia.es', 'Calle Bulevar del Alto Tajo 40', '19005 - Guadalajara'
         ]
     };
     return (

@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import "./assets/fonts/Lato-Regular.ttf";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ServicesDetail from "./pages/Services/ServicesDetail";
 import Header from "./components/Header/Header";

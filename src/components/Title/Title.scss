@@ -11,7 +11,8 @@
   &__main {
     font-size: 40px;
     margin-bottom: 20px;
-    font-family: "JoseFinSans-bold";
+    font-family: "Josefin Sans";
+    font-weight: 400;
 
     @media (min-width: 768px) {
       font-size: 60px;
@@ -21,7 +22,7 @@
   &__subtitle {
     font-size: 22px;
     line-height: 1.5;
-    font-family: "JoseFinSans-regular";
+    font-family: "Josefin Sans";
 
     @media (min-width: 768px) {
       font-size: 27px;

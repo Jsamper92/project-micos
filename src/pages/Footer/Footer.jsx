@@ -22,10 +22,7 @@ export default function Footer() {
       weight: 500,
       list: [
         {
-          text: '949 298 586'
-        },
-        {
-          text: '657 733 140'
+          text: '675 733 140'
         },
         {
           text: "info@micosguarderia.es",
@@ -56,7 +53,7 @@ export default function Footer() {
     {
       icon: instagram,
       title: 'i-instagram',
-      href: 'https://www.instagram.com/micos.cei'
+      href: 'https://www.instagram.com/micos.guarderia'
     },
     {
       icon: whatsapp,

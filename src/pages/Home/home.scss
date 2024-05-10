@@ -1,0 +1,24 @@
+.button-section{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: end;
+    button {
+        margin-bottom: 110px;
+        height: fit-content;
+        margin-right: 6px;
+        padding: 5px;
+        background-color: #0babe0;
+        color: white;
+        font-size: 8px;
+        border-radius: 25px;
+        border-color: transparent;
+        box-shadow: 0 0 inset 0 0 0 1px #0babe0;
+
+        &:last-child {
+            margin-right: 25px;
+        }
+    }
+}

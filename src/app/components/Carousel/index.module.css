@@ -1,0 +1,12 @@
+div.c-pagination {
+    --swiper-pagination-bottom: 50%;
+    --swiper-pagination-bullet-size: 12px;
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: auto;
+    left: 95% !important;
+    transform: translate(-50%, -50%);
+    width: auto !important;
+}

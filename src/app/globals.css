@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+.c-services-block {
+  display: flex;
+  padding: 0 0 50px;
+}
+
+.c-services-block__title {
+  color: #cf6767;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 40px;
+}
+.c-services-block__title > span {
+  color: #2b405a;
+  display: block;
+}
+.c-services-block__content {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+.c-services-block__text {
+  max-width: 100%;
+}
+
+.c-services-block__figure {
+  margin: 0 auto;
+  width: auto;
+  will-change: transform, opacity;
+}
+.c-services-block__img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}

@@ -1,26 +1,33 @@
 {
-  "name": "micros-astro",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "micos",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@astrojs/check": "^0.7.0",
-    "@astrojs/react": "^3.4.0",
-    "@astrojs/vercel": "^7.6.0",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "astro": "^4.9.1",
-    "astro-robots-txt": "^1.0.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-spring": "^8.0.27",
-    "sass": "^1.77.2",
-    "typescript": "^5.4.5"
+    "@emotion/cache": "^11.13.1",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.1.4",
+    "@mui/material-nextjs": "^6.1.4",
+    "aos": "^2.3.4",
+    "next": "14.2.15",
+    "react": "^18",
+    "react-dom": "^18",
+    "styled-components": "^6.1.13",
+    "swiper": "^11.1.14"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.15",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }

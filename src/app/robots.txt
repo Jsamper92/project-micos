@@ -1,0 +1,5 @@
+Sitemap: https://micosguarderia.es/sitemap.xml
+User-agent: *
+Allow: /
+Disallow: /studio/
+

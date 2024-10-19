@@ -73,6 +73,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="google-site-verification" content="FjtMJ1UblhTZnVDTLr-zeaJJ94c2OKh0baAbERkoJnU" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",

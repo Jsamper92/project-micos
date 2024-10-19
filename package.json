@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^6.1.4",
     "@mui/material-nextjs": "^6.1.4",
+    "@types/aos": "^3.0.7",
     "aos": "^2.3.4",
     "next": "14.2.15",
     "react": "^18",

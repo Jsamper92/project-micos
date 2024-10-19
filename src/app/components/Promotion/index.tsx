@@ -11,26 +11,30 @@ export const Promotion = () => {
     const [open, setOpen] = useState(true);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const refTimeoutInit = useRef(0);
-    const refTimoutClose = useRef(0);
+    const refTimeoutInit = useRef<NodeJS.Timeout | null>(null);
+    const refTimoutClose = useRef<NodeJS.Timeout | null>(null);
     
         useEffect(() => {
-            refTimeoutInit.current = window.setTimeout(() => {
+            refTimeoutInit.current = setTimeout(() => {
                 handleOpen();
             }, 3000);
     
             return () => {
-                clearTimeout(refTimeoutInit.current);
+                if (refTimeoutInit.current) {
+                    clearTimeout(refTimeoutInit.current);
+                }
             }
         }, []);
     
         useEffect(() => {
-            refTimoutClose.current = window.setTimeout(() => {
+            refTimoutClose.current = setTimeout(() => {
                 handleClose();
             }, 4000);
-    
+                if (refTimoutClose.current) {
+                    clearTimeout(refTimoutClose.current);
+                }
             return () => {
-                clearTimeout(refTimoutClose.current);
+                if(refTimoutClose.current) clearTimeout(refTimoutClose.current);
             }
         }, [open]);
 

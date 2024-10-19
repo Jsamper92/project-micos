@@ -49,6 +49,12 @@ export const Promotion = () => {
 
             open={open}
             onClose={() => {
+                if (refTimeoutInit.current) {
+                    clearTimeout(refTimeoutInit.current);
+                }
+                if (refTimoutClose.current) {
+                    clearTimeout(refTimoutClose.current);
+                }
                 handleClose();
             }}
             aria-labelledby="modal-modal-title"

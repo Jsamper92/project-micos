@@ -48,7 +48,7 @@ export const Services = () => {
                                     </p>
                                 </div>
                                 <figure data-aos={index === 1 ? 'fade-rigth' : 'fade-left'} data-aos-delay="100" data-aos-duration="600" className={`c-services-block__figure ${index === 1 ? 'md:order-1' : 'md:order-2'}`}>
-                                    <Image src={img} fill alt={'imagen-' + span} className="c-services-block__img" />
+                                    <Image src={img} width={500} height={500} alt={'imagen-' + span} className="c-services-block__img" />
                                 </figure>
                             </div>
                         )

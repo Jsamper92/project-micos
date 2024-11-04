@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 
 
@@ -33,10 +32,10 @@ export const Services = () => {
             <div className="mx-10">
                 <h2 className="text-4xl text-center text-gray-800 space-x-4 font-medium text-[40px]">SERVICIOS</h2>
                 <div className="flex flex-wrap mt-10">
-                    {services.map(({ title, span, content, img }, index) => {
+                    {services.map(({title, span, content, img}, index) => {
                         return (
                             <div key={index} className={`c-services-block flex flex-col  md:flex-row justify-center`}>
-                                <div data-aos={index === 1 ? 'fade-left' : 'fade-right'} data-aos-delay="100" data-aos-duration="600" className={`c-services-block__text md:w-[50%] ${index === 1 ? 'md:order-2' : 'md:order-1'}`}>
+                                <div data-aos={index === 1 ? 'fade-left': 'fade-right'} data-aos-delay="100" data-aos-duration="600" className={`c-services-block__text md:w-[50%] ${index === 1 ? 'md:order-2' : 'md:order-1'}`}>
                                     <h2 className={`c-services-block__title`}>
                                         {title}
                                         <span className="c-services-block__postitle">
@@ -47,8 +46,8 @@ export const Services = () => {
                                         {content}
                                     </p>
                                 </div>
-                                <figure data-aos={index === 1 ? 'fade-rigth' : 'fade-left'} data-aos-delay="100" data-aos-duration="600" className={`c-services-block__figure ${index === 1 ? 'md:order-1' : 'md:order-2'}`}>
-                                    <Image src={img} width={500} height={500} alt={'imagen-' + span} className="c-services-block__img" />
+                                <figure data-aos={index === 1 ? 'fade-rigth': 'fade-left'} data-aos-delay="100" data-aos-duration="600" className={`c-services-block__figure ${index === 1 ? 'md:order-1' : 'md:order-2'}`}>
+                                    <img src={img} alt="" className="c-services-block__img" />
                                 </figure>
                             </div>
                         )

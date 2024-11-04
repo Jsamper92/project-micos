@@ -1,42 +1,46 @@
 'use client';
 
-import { Box, Button, Modal, Zoom } from "@mui/material";
+import { Box, Button, IconButton, Modal, Zoom } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-
-
+import CloseIcon from '@mui/icons-material/Close';
+import styles from './index.module.css';
+import useDesktop from "@/app/hooks/useDesktop";
 
 export const Promotion = () => {
+    const desktop = useDesktop();
     const [open, setOpen] = useState(true);
+
     const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
-    const refTimeoutInit = useRef<NodeJS.Timeout | null>(null);
-    const refTimoutClose = useRef<NodeJS.Timeout | null>(null);
-    
-        useEffect(() => {
-            refTimeoutInit.current = setTimeout(() => {
-                handleOpen();
-            }, 3000);
-    
-            return () => {
-                if (refTimeoutInit.current) {
-                    clearTimeout(refTimeoutInit.current);
-                }
-            }
-        }, []);
-    
-        useEffect(() => {
-            refTimoutClose.current = setTimeout(() => {
-                handleClose();
-            }, 4000);
-                if (refTimoutClose.current) {
-                    clearTimeout(refTimoutClose.current);
-                }
-            return () => {
-                if(refTimoutClose.current) clearTimeout(refTimoutClose.current);
-            }
-        }, [open]);
+    const handleClose = () => {
+        setOpen(false);
+        clearTimeout(refTimeoutInit.current);
+        clearTimeout(refTimoutClose.current);
+    };
+    const refTimeoutInit = useRef(0);
+    const refTimoutClose = useRef(0);
+
+
+    useEffect(() => {
+        refTimeoutInit.current = window.setTimeout(() => {
+            handleOpen();
+        }, 3000);
+
+        return () => {
+            clearTimeout(refTimeoutInit.current);
+        }
+    }, []);
+
+    useEffect(() => {
+        refTimoutClose.current = window.setTimeout(() => {
+            handleClose();
+        }, 4000);
+
+        return () => {
+            clearTimeout(refTimoutClose.current);
+        }
+    }, [open]);
 
     return (
         <Modal
@@ -46,27 +50,34 @@ export const Promotion = () => {
                 justifyItems: 'center',
                 justifyContent: 'center',
             }}
-
             open={open}
             onClose={() => {
-                if (refTimeoutInit.current) {
-                    clearTimeout(refTimeoutInit.current);
-                }
-                if (refTimoutClose.current) {
-                    clearTimeout(refTimoutClose.current);
-                }
                 handleClose();
             }}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
+            aria-labelledby="modal-promotion-matricula-gratuita"
+            aria-describedby="Matricula gratuita curso 24/25"
         >
             <Zoom in={open}>
-                <Box sx={{ bgcolor: 'background.paper', p: 4, position: 'relative' }}>
+                <Box
+                    sx={{
+                        bgcolor: 'background.paper',
+                        p: 4,
+                        position: 'relative',
+                        width: desktop ? 'auto' : '75%'
+                    }}
+                >
+                    <IconButton
+                        className={`${styles['modal-close']} top-0 right-0`}
+                        aria-label="close modal"
+                        onClick={handleClose}
+                    >
+                        <CloseIcon />
+                    </IconButton>
                     <Image
                         src={'/images/promocion/promocion.png'}
                         width={400}
                         height={400}
-                        alt="Selected"
+                        alt="promoción matrícula gratuita"
                         className="object-cover"
                     />
 

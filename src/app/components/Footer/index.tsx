@@ -54,16 +54,16 @@ export const Footer = () => {
                             <div key={index} className="w-full md:w-1/4 mb-10">
                                 <h3 className="text-2xl min-h-20 font-bold">{text}</h3>
                                 <ul className="pl-5 mt-5">
-                                    {list.map((item, index) => {
-                                        if(item.type === 'link' && 'href' in item) {
+                                    {list.map(({ text, type }, index) => {
+                                        if(type === 'link') {
                                             return (
                                                 <li key={index}>
-                                                    <Link key={index} href={item.href} className="">{item.text}</Link>
+                                                    <Link key={index} href={text} className="">{text}</Link>
                                                 </li>
                                             )
                                         } else {
                                             return (
-                                                <li key={index} className="">{item.text}</li>
+                                                <li key={index} className="">{text}</li>
                                             )
                                         }
                                     })}

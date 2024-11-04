@@ -6,15 +6,16 @@ import { Drawer } from "@mui/material";
 import { MouseEvent, useEffect, useRef, useState } from "react";
 import { headers } from "@/app/utils/literals";
 import Link from "next/link";
+import useDesktop from "@/app/hooks/useDesktop";
 
 
 export const Header = () => {
     const [open, setOpen] = useState(false);
+    const [opacityHeader, setOpacityHeader] = useState('opacity-[0.5] h-[100px]');
     const onChangeState = (state: boolean) => {
         setOpen(state);
     };
-    const mediaQuery = typeof window !== 'undefined' && window.matchMedia('(min-width: 768px)');
-    const [desktop, setDesktop] = useState((mediaQuery || {}).matches);
+    const desktop = useDesktop();
     const Headings = () => {
         const spanRefs = useRef<(HTMLSpanElement | null)[]>([]);
         const [span, setSpan] = useState({
@@ -69,41 +70,20 @@ export const Header = () => {
     }
 
     useEffect(() => {
-        const matchMedia = mediaQuery;
-
-        if(matchMedia){
-            matchMedia.onchange = ({ matches }) => {
-                setDesktop(matches);
-            };
-        }
-            
-
-
-        return () => {
-            if(matchMedia) matchMedia.onchange = null
-        }
-    }, [mediaQuery]);
-
-
-
-    const [opacityHeader, setOpacityHeader] = useState('opacity-[0.5] h-[100px]');
-    useEffect(() => {
         const SECTION_SERVICES_POSITION_X = 700;
 
-        if(typeof window !== 'undefined'){
-            const handleScroll = () => {
-                const scrollY = window.scrollY;
-                if (scrollY > SECTION_SERVICES_POSITION_X) {
-                    setOpacityHeader(`opacity-[${open ? 0 : 1}] h-[110px]`);
-                } else {
-                    setOpacityHeader(`opacity-[${open ? 0 : 0.5}] h-[100px]`);
-                }
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            if (scrollY > SECTION_SERVICES_POSITION_X) {
+                setOpacityHeader(`opacity-[${open ? 0 : 1}] h-[110px]`);
+            } else {
+                setOpacityHeader(`opacity-[${open ? 0 : 0.5}] h-[100px]`);
             }
-            window.addEventListener('scroll',handleScroll);
-    
-            return () => {
-                window.removeEventListener('scroll', handleScroll);
-            }
+        }
+        window.addEventListener('scroll',handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
         }
     }, []);
 

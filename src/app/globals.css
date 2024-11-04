@@ -57,8 +57,3 @@ html {
   width: auto;
   will-change: transform, opacity;
 }
-.c-services-block__img {
-  height: 100%;
-  object-fit: contain;
-  width: 100%;
-}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 
 
@@ -47,7 +48,7 @@ export const Services = () => {
                                     </p>
                                 </div>
                                 <figure data-aos={index === 1 ? 'fade-rigth': 'fade-left'} data-aos-delay="100" data-aos-duration="600" className={`c-services-block__figure ${index === 1 ? 'md:order-1' : 'md:order-2'}`}>
-                                    <img src={img} alt="" className="c-services-block__img" />
+                                    <Image src={img} alt="" width={600} height={469} />
                                 </figure>
                             </div>
                         )

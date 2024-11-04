@@ -2,7 +2,7 @@
 import { instalations } from "@/app/utils/literals";
 import { Box, IconButton, Modal, Zoom } from "@mui/material";
 import Image from "next/image";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
 import styles from './index.module.css';
 
@@ -58,62 +58,64 @@ export const Facilities = () => {
                             </div>
                         ))}
                         {selectedImage && (
-                            <Modal
-                                sx={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyItems: 'center',
-                                    justifyContent: 'center',
-                                }}
+                            <Suspense fallback={<></>}>
+                                <Modal
+                                    sx={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyItems: 'center',
+                                        justifyContent: 'center',
+                                    }}
 
-                                open={open}
-                                onClose={() => {
-                                    handleClose();
-                                    setSelectedImage(null);
-                                }}
-                                aria-labelledby="modal-modal-title"
-                                aria-describedby="modal-modal-description"
-                            >
-                                <Zoom in={open}>
-                                    <Box sx={{ bgcolor: 'background.paper', p: 4, position: 'relative', overflowX: 'hidden' }}>
-                                        <IconButton
-                                            className={`${styles['modal-close']} top-0 right-0`}
-                                            aria-label="close modal"
-                                            onClick={handleClose}
-                                        >
-                                            <CloseIcon />
-                                        </IconButton>
-                                        <Image
-                                            src={selectedImage || ''}
-                                            width={500}
-                                            height={500}
-                                            alt="Selected"
-                                            className="object-cover"
-                                        />
-                                        <Box
-                                            data-aos="fade-right"
-                                            data-aos-delay="100"
-                                            data-aos-duration="600"
-                                            sx={{
-                                                position: 'absolute',
-                                                backgroundColor: '#000000b5',
-                                                border: '2px solid red',
-                                                top: '2%',
-                                                left: '3%',
-                                                background: 'white',
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'center',
-                                                width: '150px',
-                                                height: '50px'
-                                            }}>
-                                            <Box sx={{ color: 'white', textAlign: 'center' }}>
-                                                <h3 className="text-2xl font-thin text-black lowercase first-letter:uppercase">{selectedText}</h3>
+                                    open={open}
+                                    onClose={() => {
+                                        handleClose();
+                                        setSelectedImage(null);
+                                    }}
+                                    aria-labelledby="modal-modal-title"
+                                    aria-describedby="modal-modal-description"
+                                >
+                                    <Zoom in={open}>
+                                        <Box sx={{ bgcolor: 'background.paper', p: 4, position: 'relative', overflowX: 'hidden' }}>
+                                            <IconButton
+                                                className={`${styles['modal-close']} top-0 right-0`}
+                                                aria-label="close modal"
+                                                onClick={handleClose}
+                                            >
+                                                <CloseIcon />
+                                            </IconButton>
+                                            <Image
+                                                src={selectedImage || ''}
+                                                width={500}
+                                                height={500}
+                                                alt="Selected"
+                                                className="object-cover"
+                                            />
+                                            <Box
+                                                data-aos="fade-right"
+                                                data-aos-delay="100"
+                                                data-aos-duration="600"
+                                                sx={{
+                                                    position: 'absolute',
+                                                    backgroundColor: '#000000b5',
+                                                    border: '2px solid red',
+                                                    top: '2%',
+                                                    left: '3%',
+                                                    background: 'white',
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    width: '150px',
+                                                    height: '50px'
+                                                }}>
+                                                <Box sx={{ color: 'white', textAlign: 'center' }}>
+                                                    <h3 className="text-2xl font-thin text-black lowercase first-letter:uppercase">{selectedText}</h3>
+                                                </Box>
                                             </Box>
                                         </Box>
-                                    </Box>
-                                </Zoom>
-                            </Modal>
+                                    </Zoom>
+                                </Modal>
+                            </Suspense>
                         )}
 
                     </>

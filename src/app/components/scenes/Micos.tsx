@@ -9,7 +9,7 @@ const marqT = ['Abiertos todo el año', 'Horario ampliable', 'Jardín privado', 
 const marq = marqT.concat(marqT).map((t, i) => ({ t, c: FC[i % 5] }))
 const why = [
   { n: '01', t: 'Trato personalizado', d: 'Cada niño es único. Lo conocemos por su nombre y adaptamos el día a su ritmo.', c: '#0079A8', ink: '#FFFFFF', rot: '-14deg' },
-  { n: '02', t: 'Casa y escuela, un entorno', d: 'Los mismos valores y la misma educación en los dos sitios.', c: '#E47C0A', ink: '#203048', rot: '10deg' },
+  { n: '02', t: 'Casa y escuela, un entorno', d: 'Los mismos valores y educación en casa y en la escuela.', c: '#E47C0A', ink: '#203048', rot: '10deg' },
   { n: '03', t: 'Nos adaptamos a ti', d: 'Abiertos todo el año, con un horario amplio que ampliamos si lo necesitas.', c: '#83AF15', ink: '#203048', rot: '-8deg' },
   { n: '04', t: 'Seguro y cálido', d: 'Suelo radiante, calefacción, A/A y puertas antipillamientos.', c: '#EBC645', ink: '#203048', rot: '14deg' }
 ]

@@ -15,7 +15,7 @@ export default function SolicitarVisita() {
 
   return (<><main id="contenido" tabIndex={-1} className="pad" style={{ maxWidth: "1360px", margin: "0 auto", padding: "24px 32px 120px", display: "flex", flexDirection: "column", gap: "56px" }}>
 <div className="g2" style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "32px", alignItems: "end" }}>
-<h1 className="fall hT" style={{ margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "112px", lineHeight: ".84", letterSpacing: "-0.055em" }}><span style={{ display: 'block', margin: '0 0 16px', fontFamily: 'var(--font-body), system-ui, sans-serif', fontWeight: 700, fontSize: 15, lineHeight: 1.3, letterSpacing: '.12em', textTransform: 'uppercase' }}>Guardería en Guadalajara</span><span className="sronly">: </span><span style={{ color: "#FFF9EC", WebkitTextStroke: "3px #203048" }}>S</span>olicitar visita</h1>
+<h1 className="fall hT" style={{ margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "112px", lineHeight: ".84", letterSpacing: "-0.055em" }}><span style={{ display: 'block', margin: '0 0 16px', fontFamily: 'var(--font-body), system-ui, sans-serif', fontWeight: 700, fontSize: 15, lineHeight: 1.3, letterSpacing: '.12em', textTransform: 'uppercase' }}>Visitar escuela infantil en Guadalajara</span><span className="sronly">: </span><span style={{ color: "#FFF9EC", WebkitTextStroke: "3px #203048" }}>S</span>olicitar visita</h1>
 <p className="fall" style={{ animationDelay: ".1s", margin: "0", fontSize: "20px" }}>Escribe tu nombre y te abrimos una conversación de WhatsApp con nosotros. Nada de formularios largos: hablamos y quedamos.</p>
 </div>
 

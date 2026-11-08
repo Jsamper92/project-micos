@@ -7,6 +7,10 @@ export const SAME_AS = [
   'https://www.instagram.com/micos.guarderia',
   'https://es-es.facebook.com/people/MICOS-Guarder%C3%ADa/100049724235252'
 ]
+export const SOCIALS = [
+  { name: 'Instagram', handle: '@micos.guarderia', url: SAME_AS[0] },
+  { name: 'Facebook', handle: 'MICOS Guardería', url: SAME_AS[1] }
+]
 export const OG = { url: '/og/micos-og.jpg', width: 1200, height: 630, alt: 'Jardín privado de Micos, escuela infantil en Guadalajara, con césped, tobogán y un mural de arcoíris' }
 export const PAGES = [
   { path: '/', name: 'Micos' },

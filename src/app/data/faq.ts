@@ -1,5 +1,5 @@
 export const FQ: [string, string][] = [
-  ['¿Desde qué edad podéis recibir a mi hijo?', 'Micos es una escuela infantil para los primeros años de vida. Tenemos 6 aulas pensadas para que cada peque esté con niños de su momento, con espacio para gatear, jugar y descansar. Cuéntanos la edad de tu hijo y te decimos qué aula le corresponde.'],
+  ['¿Desde qué edad podéis recibir a mi hijo?', 'Micos es una escuela infantil para los primeros años de vida, con aulas de 0 a 1 año y de 1 a 2 años. Tenemos 6 aulas pensadas para que cada peque esté con niños de su momento, con espacio para gatear, jugar y descansar. Cuéntanos la edad de tu hijo y te decimos qué aula le corresponde.'],
   ['¿Abrís en verano?', 'Sí, abrimos todo el año, también en verano, para que no tengas que buscar otra solución cuando acaba el curso. Si te preocupa algún festivo concreto, pregúntanos y te lo confirmamos.'],
   ['¿Puedo ampliar el horario?', 'Sí. Nuestro horario es ampliable para encajar con el trabajo de las familias. Dinos qué necesitas y lo vemos juntos.'],
   ['¿Cómo es la adaptación?', 'Es gradual y a ritmo de cada peque. Empezamos con ratos cortos y vamos alargando según cómo se sienta, siempre en contacto contigo. Cada niño es distinto, así que lo hablamos en la visita.'],

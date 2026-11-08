@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import { Bricolage_Grotesque, Atkinson_Hyperlegible } from 'next/font/google'
 import './globals.css'
+import Footer from './components/Footer'
+import Header from './components/Header'
 import Shell from './components/Shell'
 import { JsonLd } from './data/seo'
 import { ADDRESS, EMAIL, NAME, OG, PHONE, SAME_AS, SITE } from './data/site'
@@ -55,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es" className={`${display.variable} ${body.variable}`}>
       <body>
         <JsonLd data={graph} />
-        <Shell>{children}</Shell>
+        <Shell header={<Header />} footer={<Footer />}>{children}</Shell>
       </body>
     </html>
   )

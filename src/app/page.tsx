@@ -1,27 +1,13 @@
-import Carousel from "./components/Carousel";
-import Contact from "./components/Contacto";
-import Facilities from "./components/Facilities";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Promotion from "./components/Promotion";
-import { Services } from "./components/Services";
+import Micos from './components/scenes/Micos'
+import { JsonLd, meta } from './data/seo'
 
+export const metadata = meta('/', 'Guardería y escuela infantil en Guadalajara | Micos', 'Micos, centro de educación infantil en Guadalajara: 6 aulas, jardín privado, suelo radiante y abiertos todo el año. Pide tu visita sin compromiso.')
 
-
-export default function Home() {
-
-
+export default function Page() {
   return (
     <>
-      <Header />
-      <main style={{ letterSpacing: '2px' }}>
-        <Promotion />
-        <Carousel />
-        <Services />
-        <Facilities />
-        <Contact />
-        <Footer />
-      </main>
+      <JsonLd data={{ '@context': 'https://schema.org', '@type': 'WebPage', '@id': 'https://www.micosguarderia.es/#webpage', url: 'https://www.micosguarderia.es', name: 'Guardería y escuela infantil en Guadalajara | Micos', inLanguage: 'es-ES', isPartOf: { '@id': 'https://www.micosguarderia.es/#website' }, about: { '@id': 'https://www.micosguarderia.es/#organization' } }} />
+      <Micos />
     </>
-  );
+  )
 }

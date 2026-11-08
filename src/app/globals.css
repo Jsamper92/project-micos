@@ -170,3 +170,11 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid curre
 .pad{padding-left:18px!important;padding-right:18px!important}
 .days{grid-template-columns:repeat(3,minmax(0,1fr))!important}
 }
+
+.legalBody{font-size:18px;line-height:1.65}
+.legalBody h2{font-family:var(--font-display),sans-serif;font-weight:800;font-size:30px;line-height:1.05;letter-spacing:-.03em;margin:44px 0 12px}
+.legalBody p,.legalBody ul{margin:0 0 16px}
+.legalBody ul{padding-left:22px}
+.legalBody li{margin:0 0 6px}
+.legalBody a{font-weight:700;text-decoration:underline;text-underline-offset:3px}
+@container (max-width:760px){.legal h1{font-size:44px!important}.legalBody h2{font-size:24px}.legalBody{font-size:17px}}

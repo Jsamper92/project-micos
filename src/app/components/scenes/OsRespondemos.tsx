@@ -27,7 +27,7 @@ export default function OsRespondemos() {
 
   return (<><main id="contenido" tabIndex={-1} className="pad" style={{ maxWidth: "1360px", margin: "0 auto", padding: "24px 32px 120px", display: "flex", flexDirection: "column", gap: "56px" }}>
 <div className="g2" style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "32px", alignItems: "end" }}>
-<h1 className="fall hT" style={{ margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "112px", lineHeight: ".84", letterSpacing: "-0.055em" }}><span style={{ color: "#EBC645" }}>O</span>s respondemos</h1>
+<h1 className="fall hT" style={{ margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "112px", lineHeight: ".84", letterSpacing: "-0.055em" }}><span style={{ display: 'block', margin: '0 0 16px', fontFamily: 'var(--font-body), system-ui, sans-serif', fontWeight: 700, fontSize: 15, lineHeight: 1.3, letterSpacing: '.12em', textTransform: 'uppercase' }}>Preguntas frecuentes · Guardería en Guadalajara</span><span className="sronly">: </span><span style={{ color: "#EBC645" }}>O</span>s respondemos</h1>
 <p className="fall" style={{ animationDelay: ".1s", margin: "0", fontSize: "20px" }}>Las preguntas que más nos hacen las familias antes de empezar. ¿Falta la tuya? Escríbenos por <a href="https://wa.me/34675733140?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20Micos." target="_blank" rel="noopener" style={{ fontWeight: "700" }}>WhatsApp</a> o llama al <a href="tel:+34675733140" aria-label="Llamar a Micos al 675 733 140" style={{ fontWeight: "700" }}>675 733 140</a>.</p>
 </div>
 

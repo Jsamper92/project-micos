@@ -32,6 +32,8 @@ const graph = {
       '@type': ['ChildCare', 'Preschool'],
       '@id': SITE + '/#organization',
       name: NAME,
+      legalName: 'Centro de Educación Infantil Micos, S.L.',
+      vatID: 'B19220995',
       alternateName: ['Micos', 'Micos Guardería', 'Escuela infantil Micos'],
       description: 'Escuela infantil y guardería en Guadalajara con 6 aulas, jardín privado, suelo radiante y calefacción. Abierta todo el año y con horario ampliable.',
       url: SITE,

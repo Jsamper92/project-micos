@@ -1,5 +1,6 @@
 'use client'
 import { Fragment, useEffect, useRef, useState, type MouseEvent, type ReactNode } from 'react'
+import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 
 const S = [
@@ -17,6 +18,7 @@ export default function Shell({ children }: { children: ReactNode }) {
   const router = useRouter()
   const found = S.findIndex((s) => s.href === pathname)
   const sc = found < 0 ? 0 : found
+  const legal = found < 0
   const [prev, setPrev] = useState(sc)
   const [anims, setAnims] = useState<number[]>([0, 0, 0, 0, 0])
   const [flip, setFlip] = useState(0)
@@ -26,6 +28,7 @@ export default function Shell({ children }: { children: ReactNode }) {
   const [advP, setAdvP] = useState(0)
   const R = useRef<any>({ sc, prevSc: sc, first: true, navLock: 0, lockUntil: 0, switching: false, dir: 1, adv: false, advUp: false, advP: 0, nav: { acc: 0, dir: 0, tl: 0, ty: null, hide: 0, raf: 0, armed: false, touchFresh: false } })
   R.current.sc = sc
+  R.current.legal = legal
   R.current.adv = adv; R.current.advUp = advUp; R.current.advP = advP
 
   // Al cambiar de ruta: animación de entrada, scroll y foco
@@ -58,8 +61,8 @@ export default function Shell({ children }: { children: ReactNode }) {
     const distB = () => { const de = document.documentElement; return de.scrollHeight - window.innerHeight - yNow() }
     const AT = 8
     const longPage = () => document.documentElement.scrollHeight > window.innerHeight + 200
-    const atBottom = () => r.sc < 4 && longPage() && distB() <= AT
-    const atTop = () => r.sc > 0 && yNow() <= AT
+    const atBottom = () => !r.legal && r.sc < 4 && longPage() && distB() <= AT
+    const atTop = () => !r.legal && r.sc > 0 && yNow() <= AT
     const typing = () => !!document.activeElement && /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)
     NAV.reset = () => { NAV.acc = 0; NAV.dir = 0; NAV.armed = false; clearTimeout(NAV.hide); if (r.adv || r.advUp || r.advP) { setAdv(false); setAdvUp(false); setAdvP(0) } }
     r.go = (i: number, dirOverride?: number) => {
@@ -133,11 +136,11 @@ export default function Shell({ children }: { children: ReactNode }) {
       if (r.nav.reset) r.nav.reset()
       r.go && r.go(i)
     },
-    current: sc === i ? 'page' : undefined,
+    current: !legal && sc === i ? 'page' : undefined,
     aria: d.label,
     idleDelay: (2 + i * 1.3) + 's',
-    liftT: sc === i ? 'translateY(-6px)' : 'none',
-    lblOp: 1, lblDeco: sc === i ? 'underline' : 'none'
+    liftT: !legal && sc === i ? 'translateY(-6px)' : 'none',
+    lblOp: 1, lblDeco: !legal && sc === i ? 'underline' : 'none'
   }))
   const smoothB = () => (reduced() ? 'auto' : 'smooth')
   const v: any = {
@@ -201,7 +204,7 @@ export default function Shell({ children }: { children: ReactNode }) {
 <li><a href="mailto:info@micosguarderia.es?subject=Quiero%20conocer%20Micos" aria-label="Enviar un email a info@micosguarderia.es" style={{ display: "inline-flex", gap: "8px", alignItems: "center", minHeight: "48px", padding: "0 18px", border: "3px solid currentColor", borderRadius: "14px", textDecoration: "none", fontWeight: "700" }}><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>info@micosguarderia.es</a></li>
 </ul>
 </div>
-<p style={{ margin: "0", fontSize: "13px", fontWeight: "700", display: "flex", flexWrap: "wrap", gap: "16px", justifyContent: "space-between" }}><span>© Micos Guardería</span><span><a href="/documents/Aviso-Legal.pdf" target="_blank" rel="noopener">Aviso legal</a></span></p>
+<p style={{ margin: "0", fontSize: "13px", fontWeight: "700", display: "flex", flexWrap: "wrap", gap: "16px", justifyContent: "space-between" }}><span>© Micos Guardería</span><span><Link href="/aviso-legal">Aviso legal</Link> · <Link href="/politica-de-privacidad">Privacidad</Link> · <Link href="/politica-de-cookies">Cookies</Link></span></p>
 </footer>
 </div>
 </div>

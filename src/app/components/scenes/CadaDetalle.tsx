@@ -23,7 +23,7 @@ export default function CadaDetalle() {
 
   return (<><main id="contenido" tabIndex={-1} className="pad" style={{ maxWidth: "1360px", margin: "0 auto", padding: "24px 32px 120px", display: "flex", flexDirection: "column", gap: "56px" }}>
 <div className="g2" style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "32px", alignItems: "end" }}>
-<h1 className="fall hT" style={{ margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "112px", lineHeight: ".84", letterSpacing: "-0.055em" }}><span style={{ color: "#203048" }}>C</span>ada detalle cuenta</h1>
+<h1 className="fall hT" style={{ margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "112px", lineHeight: ".84", letterSpacing: "-0.055em" }}><span style={{ display: 'block', margin: '0 0 16px', fontFamily: 'var(--font-body), system-ui, sans-serif', fontWeight: 700, fontSize: 15, lineHeight: 1.3, letterSpacing: '.12em', textTransform: 'uppercase' }}>Escuela infantil en Guadalajara</span><span className="sronly">: </span><span style={{ color: "#203048" }}>C</span>ada detalle cuenta</h1>
 <p className="fall" style={{ animationDelay: ".1s", margin: "0", fontSize: "20px" }}>Un edificio pensado para niños de verdad. Seis detalles que marcan la diferencia en el día a día de los peques.</p>
 </div>
 <ul className="featGrid" style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: "22px" }}>

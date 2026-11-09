@@ -15,12 +15,12 @@ const why = [
 ]
 const I = '/images/micos/'
 const tour = [
-  { src: I + 'fachada.jpg', w: 1024, h: 768, alt: 'Fachada de Micos', name: 'La entrada', cap: 'Bulevar del Alto Tajo, 40.', c: '#008FC5', ink: '#fff', tilt: '-1.5deg' },
+  { src: I + 'fachada.jpg', w: 1447, h: 1087, alt: 'Fachada de Micos', name: 'La entrada', cap: 'Bulevar del Alto Tajo, 40.', c: '#008FC5', ink: '#fff', tilt: '-1.5deg' },
   { src: I + 'verde_mesas.jpg', w: 640, h: 426, alt: 'Aula verde con mesas y sillas de colores', name: 'Aula verde', cap: 'Pizarra, espejo y mucha luz.', c: '#83AF15', ink: '#203048', tilt: '1.5deg' },
-  { src: I + 'naranja_mesas.jpg', w: 640, h: 426, alt: 'Aula naranja con mesas hexagonales', name: 'Aula 1–2 años', cap: 'Mesas y sillas a su altura.', c: '#E47C0A', ink: '#203048', tilt: '-1deg' },
-  { src: I + 'cunas.jpg', w: 640, h: 426, alt: 'Sala de cunas', name: 'La siesta', cap: 'Cunas y penumbra.', c: '#E23200', ink: '#fff', tilt: '1deg' },
-  { src: I + 'verde_cunas.jpg', w: 1024, h: 768, alt: 'Aula de bebés con cunas y alfombra', name: 'Bebés', cap: 'Gateo libre sobre suelo radiante.', c: '#EBC645', ink: '#203048', tilt: '-1.5deg' },
-  { src: I + 'jardin.jpg', w: 1024, h: 768, alt: 'Jardín privado con tobogán y mural', name: 'El jardín', cap: 'Privado, con tobogán y mural.', c: '#83AF15', ink: '#203048', tilt: '1.5deg' }
+  { src: I + 'naranja_mesas.jpg', w: 1535, h: 1024, alt: 'Aula naranja con mesas hexagonales', name: 'Aula 1–2 años', cap: 'Mesas y sillas a su altura.', c: '#E47C0A', ink: '#203048', tilt: '-1deg' },
+  { src: I + 'cunas.jpg', w: 1536, h: 1024, alt: 'Sala de cunas', name: 'La siesta', cap: 'Cunas y penumbra.', c: '#E23200', ink: '#fff', tilt: '1deg' },
+  { src: I + 'verde_cunas.jpg', w: 1448, h: 1086, alt: 'Aula de bebés con cunas y alfombra', name: 'Bebés', cap: 'Gateo libre sobre suelo radiante.', c: '#EBC645', ink: '#203048', tilt: '-1.5deg' },
+  { src: I + 'jardin.jpg', w: 1448, h: 1086, alt: 'Jardín privado con tobogán y mural', name: 'El jardín', cap: 'Privado, con tobogán y mural.', c: '#83AF15', ink: '#203048', tilt: '1.5deg' }
 ].map((t, i) => ({ ...t, n: String(i + 1) }))
 const v: any = { floats, marq, why, tour }
 
@@ -66,7 +66,7 @@ const v: any = { floats, marq, why, tour }
 </section>
 
 <section aria-labelledby="jar-t" style={{ position: "relative", height: "min(110vh, 980px)", overflow: "hidden", borderBottom: "3px solid #203048" }}>
-<img loading="lazy" decoding="async" className="zoomIn" src="/images/micos/jardin.jpg" alt="El jardín privado de Micos, con césped, tobogán y un mural de arcoíris" style={{ position: "absolute", inset: "0", width: "100%", height: "100%", objectFit: "cover" }} width="1024" height="768" />
+<img loading="lazy" decoding="async" className="zoomIn" src="/images/micos/jardin.jpg" alt="El jardín privado de Micos, con césped, tobogán y un mural de arcoíris" style={{ position: "absolute", inset: "0", width: "100%", height: "100%", objectFit: "cover" }} width="1448" height="1086" />
 <div className="pad" style={{ position: "absolute", left: "0", right: "0", bottom: "0", padding: "48px 32px", maxWidth: "1360px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "14px" }}>
 <h2 id="jar-t" className="sr hT" style={{ "--rot": "4deg", margin: "0", background: "#FFF9EC", color: "#203048", padding: "6px 28px 16px", border: "3px solid #203048", borderRadius: "26px", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "104px", lineHeight: ".95", letterSpacing: "-0.05em" } as React.CSSProperties}>Nuestro jardín</h2>
 <p className="sr" style={{ "--rot": "-3deg", margin: "0", background: "#203048", color: "#FFF9EC", padding: "10px 18px", borderRadius: "14px", fontWeight: "700", fontSize: "19px" } as React.CSSProperties}>Privado. Solo para los niños de Micos, cada día que el tiempo lo permite.</p>
@@ -85,7 +85,7 @@ const v: any = { floats, marq, why, tour }
 <p className="sr" style={{ "--rot": "3deg", margin: "0", fontSize: "20px", maxWidth: "520px" } as React.CSSProperties}>30 minutos, con o sin tu peque. Te enseñamos cada rincón y conoces al equipo. Sin compromiso.</p>
 <div className="sr" style={{ "--rot": "-5deg", display: "flex", flexWrap: "wrap", gap: "14px", alignItems: "center" } as React.CSSProperties}><Link href="/solicitar-visita" className="btnP pop" style={{ textDecoration: "none", background: "#203048", color: "#FFF9EC" }}>Reservar visita</Link><a href="https://wa.me/34675733140?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20Micos." target="_blank" rel="noopener" style={{ fontWeight: "700" }}>WhatsApp</a><a href="tel:+34675733140" aria-label="Llamar a Micos al 675 733 140" style={{ fontWeight: "700" }}>675 733 140</a></div>
 </div>
-<div className="sr" style={{ "--rot": "8deg" } as React.CSSProperties}><img loading="lazy" decoding="async" src="/images/micos/banderola.jpg" alt="La banderola de Micos, con los cubos de colores, en la fachada de la escuela" style={{ width: "100%", aspectRatio: "4 / 5", objectFit: "cover", border: "3px solid #203048", borderRadius: "220px 220px 30px 30px", display: "block", boxShadow: "14px 14px 0 #203048" }} width="768" height="1024" /></div>
+<div className="sr" style={{ "--rot": "8deg" } as React.CSSProperties}><img loading="lazy" decoding="async" src="/images/micos/banderola.jpg" alt="La banderola de Micos, con los cubos de colores, en la fachada de la escuela" style={{ width: "100%", aspectRatio: "4 / 5", objectFit: "cover", border: "3px solid #203048", borderRadius: "220px 220px 30px 30px", display: "block", boxShadow: "14px 14px 0 #203048" }} width="1086" height="1448" /></div>
 </div>
 </section>
 </main></>)

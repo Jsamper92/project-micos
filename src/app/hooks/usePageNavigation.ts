@@ -197,7 +197,7 @@ export function usePageNavigation() {
         : 'dropA 1.15s cubic-bezier(.3,.7,.3,1) ' + (0.1 + i * 0.13) + 's both'
     const current = !legal && sc === i
     return {
-      href: s.href, l: s.l, label: s.label, c: s.c, top: s.top, side: s.side, ink: s.ink,
+      href: s.href, l: s.l, label: s.label, short: s.short, c: s.c, top: s.top, side: s.side, ink: s.ink,
       anim,
       current: current ? 'page' : undefined,
       liftT: current ? 'translateY(-6px)' : 'none',

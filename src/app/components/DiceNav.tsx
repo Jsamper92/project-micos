@@ -4,6 +4,7 @@ export interface Die {
   href: string
   l: string
   label: string
+  short: string
   c: string
   top: string
   side: string
@@ -34,7 +35,7 @@ export default function DiceNav({ dice, bg }: { dice: Die[]; bg: string }) {
 </span>
 </span>
 <span className="shadow" aria-hidden="true" style={{ display: "block" }}></span>
-<span className="dieLbl" style={{ opacity: d.lblOp, textDecoration: d.lblDeco, textDecorationThickness: "3px", textUnderlineOffset: "5px" }}>{d.label}</span>
+<span className="dieLbl" style={{ opacity: d.lblOp, textDecoration: d.lblDeco, textDecorationThickness: "3px", textUnderlineOffset: "5px" }}><span className="lblFull">{d.label}</span><span className="lblShort" aria-hidden="true">{d.short}</span></span>
 </a>
 </Fragment>))}
 </nav>

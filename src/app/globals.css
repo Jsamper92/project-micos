@@ -180,3 +180,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid curre
 .legalBody li{margin:0 0 6px}
 .legalBody a{font-weight:700;text-decoration:underline;text-underline-offset:3px}
 @container (max-width:760px){.legal h1{font-size:44px!important}.legalBody h2{font-size:24px}.legalBody{font-size:17px}}
+
+/* Línea de la página actual: se desliza entre cubos */
+.navLine{position:absolute;height:3px;border-radius:3px;background:currentColor;pointer-events:none;transition:left .55s cubic-bezier(.3,1.2,.5,1),width .55s cubic-bezier(.3,1.2,.5,1),top .55s ease}
+@media (prefers-reduced-motion:reduce){.navLine{transition:none}}

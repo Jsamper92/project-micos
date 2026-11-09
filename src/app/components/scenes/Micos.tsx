@@ -16,7 +16,7 @@ const why = [
 const I = '/images/micos/'
 const tour = [
   { src: I + 'fachada.jpg', w: 1447, h: 1087, alt: 'Fachada de Micos', name: 'La entrada', cap: 'Bulevar del Alto Tajo, 40.', c: '#008FC5', ink: '#fff', tilt: '-1.5deg' },
-  { src: I + 'verde_mesas.jpg', w: 640, h: 426, alt: 'Aula verde con mesas y sillas de colores', name: 'Aula verde', cap: 'Pizarra, espejo y mucha luz.', c: '#83AF15', ink: '#203048', tilt: '1.5deg' },
+  { src: I + 'verde_pizarra.jpg', w: 1535, h: 1024, alt: 'Aula verde con pizarra, espejo y colchoneta roja', name: 'Aula verde', cap: 'Pizarra, espejo y mucha luz.', c: '#83AF15', ink: '#203048', tilt: '1.5deg' },
   { src: I + 'naranja_mesas.jpg', w: 1535, h: 1024, alt: 'Aula naranja con mesas hexagonales', name: 'Aula 1–2 años', cap: 'Mesas y sillas a su altura.', c: '#E47C0A', ink: '#203048', tilt: '-1deg' },
   { src: I + 'cunas.jpg', w: 1536, h: 1024, alt: 'Sala de cunas', name: 'La siesta', cap: 'Cunas y penumbra.', c: '#E23200', ink: '#fff', tilt: '1deg' },
   { src: I + 'verde_cunas.jpg', w: 1448, h: 1086, alt: 'Aula de bebés con cunas y alfombra', name: 'Bebés', cap: 'Gateo libre sobre suelo radiante.', c: '#EBC645', ink: '#203048', tilt: '-1.5deg' },

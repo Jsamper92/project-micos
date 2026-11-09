@@ -26,6 +26,7 @@ interface Runtime {
   lockUntil: number
   switching: boolean
   pendingDir: number
+  pendingTop: boolean
   adv: boolean
   advUp: boolean
   advP: number
@@ -53,7 +54,7 @@ export function usePageNavigation() {
   const [advP, setAdvP] = useState(0)
 
   const rt = useRef<Runtime>({
-    sc, legal, prevSc: sc, first: true, navLock: 0, lockUntil: 0, switching: false, pendingDir: 0, adv: false, advUp: false, advP: 0,
+    sc, legal, prevSc: sc, first: true, navLock: 0, lockUntil: 0, switching: false, pendingDir: 0, pendingTop: false, adv: false, advUp: false, advP: 0,
     nav: { acc: 0, dir: 0, tl: 0, ty: null, hide: undefined, raf: 0, armed: false, touchFresh: false },
     go: () => {}, resetNav: () => {}
   })
@@ -68,7 +69,9 @@ export function usePageNavigation() {
     const r = rt.current
     if (r.first) { r.first = false; r.prevSc = sc; return }
     const dir = r.pendingDir || (sc >= r.prevSc ? 1 : -1)
+    const cubeTop = r.pendingTop
     r.pendingDir = 0
+    r.pendingTop = false
     setPrev(r.prevSc)
     r.prevSc = sc
     setAnims((a) => a.map((v, i) => (i === sc ? (v === 1 ? 2 : 1) : v)))
@@ -77,7 +80,7 @@ export function usePageNavigation() {
     setLeave('entering')
     document.documentElement.style.setProperty('--pdir', dir > 0 ? '1' : '-1')
     requestAnimationFrame(() => requestAnimationFrame(() => {
-      window.scrollTo({ top: dir > 0 ? 0 : document.documentElement.scrollHeight, behavior: 'auto' })
+      window.scrollTo({ top: dir > 0 || cubeTop ? 0 : document.documentElement.scrollHeight, behavior: 'auto' })
       r.navLock = Date.now() + 900
     }))
     const focusT = setTimeout(() => { document.getElementById('contenido')?.focus({ preventScroll: true }) }, 80)
@@ -108,6 +111,7 @@ export function usePageNavigation() {
       r.lockUntil = Date.now() + 900
       const dir = dirOverride || (i > r.sc ? 1 : -1)
       r.pendingDir = dir
+      r.pendingTop = dirOverride === undefined
       nav.acc = 0; nav.dir = 0; nav.armed = false
       clearTimeout(nav.hide)
       document.documentElement.style.setProperty('--pdir', dir > 0 ? '1' : '-1')

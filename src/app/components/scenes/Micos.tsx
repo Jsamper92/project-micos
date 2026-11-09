@@ -20,7 +20,10 @@ const tour = [
   { src: I + 'naranja_mesas.jpg', w: 1535, h: 1024, alt: 'Aula naranja con mesas hexagonales', name: 'Aula 1–2 años', cap: 'Mesas y sillas a su altura.', c: '#E47C0A', ink: '#203048', tilt: '-1deg' },
   { src: I + 'cunas.jpg', w: 1536, h: 1024, alt: 'Sala de cunas', name: 'La siesta', cap: 'Cunas y penumbra.', c: '#E23200', ink: '#fff', tilt: '1deg' },
   { src: I + 'verde_cunas.jpg', w: 1448, h: 1086, alt: 'Aula de bebés con cunas y alfombra', name: 'Bebés', cap: 'Gateo libre sobre suelo radiante.', c: '#EBC645', ink: '#203048', tilt: '-1.5deg' },
-  { src: I + 'jardin.jpg', w: 1448, h: 1086, alt: 'Jardín privado con tobogán y mural', name: 'El jardín', cap: 'Privado, con tobogán y mural.', c: '#83AF15', ink: '#203048', tilt: '1.5deg' }
+  { src: I + 'jardin.jpg', w: 1448, h: 1086, alt: 'Jardín privado con tobogán y mural', name: 'El jardín', cap: 'Privado, con tobogán y mural.', c: '#83AF15', ink: '#203048', tilt: '1.5deg' },
+  { src: I + 'patio_torre.jpg', w: 1448, h: 1086, alt: 'Torre de juegos morada y turquesa en el jardín de Micos', name: 'La torre', cap: 'Para trepar y explorar sobre el césped.', c: '#E47C0A', ink: '#203048', tilt: '-1deg' },
+  { src: I + 'patio_casita.jpg', w: 1448, h: 1086, alt: 'Casita de juegos verde con puerta amarilla en el jardín de Micos', name: 'La casita', cap: 'Un rincón propio para jugar.', c: '#008FC5', ink: '#fff', tilt: '1.5deg' },
+  { src: I + 'patio_tobogan.jpg', w: 1448, h: 1086, alt: 'Tobogán rosa y mural de arcoíris en el jardín de Micos', name: 'El tobogán', cap: 'Mural, tobogán y triciclos.', c: '#EBC645', ink: '#203048', tilt: '-1.5deg' }
 ].map((t, i) => ({ ...t, n: String(i + 1) }))
 const v: any = { floats, marq, why, tour }
 

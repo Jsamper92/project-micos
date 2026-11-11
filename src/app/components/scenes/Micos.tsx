@@ -84,7 +84,7 @@ const v: any = { floats, marq, why, tour }
 <section aria-labelledby="cta-t" style={{ background: "#EBC645", color: "#203048", borderTop: "3px solid #203048", position: "relative" }}>
 <div className="pad g2" style={{ maxWidth: "1360px", margin: "0 auto", padding: "140px 32px", display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "48px", alignItems: "center" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "26px", alignItems: "flex-start" }}>
-<h2 id="cta-t" className="sr hT" style={{ margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "128px", lineHeight: ".84", letterSpacing: "-0.055em" }}>Ven a explorar?</h2>
+<h2 id="cta-t" className="sr hT" style={{ margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "128px", lineHeight: ".84", letterSpacing: "-0.055em" }}>Ven a conocernos?</h2>
 <p className="sr" style={{ "--rot": "3deg", margin: "0", fontSize: "20px", maxWidth: "520px" } as React.CSSProperties}>30 minutos, con o sin tu peque. Te enseñamos cada rincón y conoces al equipo. Sin compromiso.</p>
 <div className="sr" style={{ "--rot": "-5deg", display: "flex", flexWrap: "wrap", gap: "14px", alignItems: "center" } as React.CSSProperties}><Link href="/solicitar-visita" className="btnP pop" style={{ textDecoration: "none", background: "#203048", color: "#FFF9EC" }}>Reservar visita</Link><a href="https://wa.me/34675733140?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20Micos." target="_blank" rel="noopener" style={{ fontWeight: "700" }}>WhatsApp</a><a href="tel:+34675733140" aria-label="Llamar a Micos al 675 733 140" style={{ fontWeight: "700" }}>675 733 140</a></div>
 </div>

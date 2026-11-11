@@ -59,7 +59,7 @@ const v: any = { floats, marq, why, tour }
 <div className="tourPin">
 <div className="pad" style={{ maxWidth: "1360px", margin: "0 auto", padding: "0 32px", width: "100%", boxSizing: "border-box", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-end", gap: "16px" }}>
 <h2 id="tour-t" className="hT2" style={{ margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "88px", lineHeight: ".88", letterSpacing: "-0.05em" }}>Recorre Micos</h2>
-<p style={{ margin: "0", maxWidth: "360px", fontWeight: "700" }}>Sigue bajando: la escuela pasa de lado, sala a sala. Todas las fotos son de Micos.</p>
+<p style={{ margin: "0", maxWidth: "360px", fontWeight: "700" }}>Sigue bajando: la escuela pasa de lado, sala a sala.</p>
 </div>
 <div className="trackWrap"><div className="track">
 {v.tour.map((t: any, _i: number) => (<Fragment key={_i}><figure className="slide" style={{ "--tilt": t.tilt } as React.CSSProperties}><div className="slidePh" style={{ boxShadow: `14px 14px 0 ${t.c}` }}><img decoding="async" src={t.src} alt={t.alt} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} width={t.w} height={t.h} /><span className="slideNum" style={{ background: t.c, color: t.ink }}>{t.n}</span></div><figcaption style={{ display: "flex", flexDirection: "column", gap: "4px" }}><strong style={{ fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "34px", lineHeight: "1" }}>{t.name}</strong><span>{t.cap}</span></figcaption></figure></Fragment>))}

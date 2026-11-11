@@ -10,7 +10,7 @@ export default function CadaDetalle() {
     ['jardin', 'Jardín privado', 'Juego al aire libre cada día, en un espacio que solo usan los niños de Micos.', '#83AF15', '#203048'],
     ['calef', 'Calefacción', 'Aulas a una temperatura constante y agradable en los inviernos de Guadalajara.', '#E47C0A', '#203048'],
     ['suelo', 'Suelo radiante', 'Gatean, juegan y se sientan en el suelo: por eso el calor sale de ahí.', '#EBC645', '#203048'],
-    ['aire', 'Aire acondicionado', 'Abrimos todo el año, también en verano, con las aulas frescas.', '#FFF9EC', '#203048'],
+    ['aire', 'Aire acondicionado', 'Abrimos todo el año salvo en agosto, con las aulas frescas.', '#FFF9EC', '#203048'],
     ['puerta', 'Puertas pivotantes', 'Puertas pivotantes: los dedos pequeños no se quedan atrapados.', '#E23200', '#FFFFFF']
   ]
   const feats = FT.map((f, i) => {

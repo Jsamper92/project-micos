@@ -5,17 +5,17 @@ export default function Micos() {
 const FC = ['#008FC5', '#E47C0A', '#83AF15', '#E23200', '#EBC645']
 const floats: any[] = []
 for (let i = 0; i < 12; i++) floats.push({ x: ((i * 29 + 7) % 92) + '%', y: ((i * 13 + 4) % 95) + '%', s: (36 + (i * 17) % 60) + 'px', c: FC[i % 5], f: i % 3 === 0 ? FC[(i + 2) % 5] : 'transparent', r: ((i % 2 ? 1 : -1) * (180 + i * 40)) + 'deg', dy: (-200 - (i * 53) % 400) + 'px' })
-const marqT = ['Abiertos todo el año', 'Horario ampliable', 'Jardín privado', '6 aulas', 'Suelo radiante', 'Atención personalizada']
+const marqT = ['Abiertos salvo en agosto', 'Horario ampliable', 'Jardín privado', '6 aulas', 'Suelo radiante', 'Atención personalizada']
 const marq = marqT.concat(marqT).map((t, i) => ({ t, c: FC[i % 5] }))
 const why = [
   { n: '01', t: 'Atención personalizada', d: 'Cada niño es único. Lo conocemos por su nombre y adaptamos el día a su ritmo.', c: '#0079A8', ink: '#FFFFFF', rot: '-14deg' },
   { n: '02', t: 'Casa y escuela, un entorno', d: 'Los mismos valores y educación en casa y en la escuela.', c: '#E47C0A', ink: '#203048', rot: '10deg' },
-  { n: '03', t: 'Nos adaptamos a ti', d: 'Abiertos todo el año, con un horario amplio que ampliamos si lo necesitas.', c: '#83AF15', ink: '#203048', rot: '-8deg' },
+  { n: '03', t: 'Nos adaptamos a ti', d: 'Abiertos salvo en agosto, con un horario amplio que ampliamos si lo necesitas.', c: '#83AF15', ink: '#203048', rot: '-8deg' },
   { n: '04', t: 'Seguro y cálido', d: 'Suelo radiante, calefacción, A/A y puertas pivotantes.', c: '#EBC645', ink: '#203048', rot: '14deg' }
 ]
 const I = '/images/micos/'
 const tour = [
-  { src: I + 'fachada.jpg', w: 1447, h: 1087, alt: 'Fachada de Micos', name: 'Edificio independiente', cap: 'Bulevar del Alto Tajo, 40.', c: '#008FC5', ink: '#fff', tilt: '-1.5deg' },
+  { src: I + 'fachada.jpg', w: 1447, h: 1087, alt: 'Fachada de Micos', name: 'Edificio independiente', cap: 'Bulevar Alto Tajo, 40.', c: '#008FC5', ink: '#fff', tilt: '-1.5deg' },
   { src: I + 'verde_pizarra.jpg', w: 1535, h: 1024, alt: 'Aula verde con pizarra, espejo y colchoneta roja', name: 'Aula verde', cap: 'Pizarra, espejo y mucha luz.', c: '#83AF15', ink: '#203048', tilt: '1.5deg' },
   { src: I + 'naranja_mesas.jpg', w: 1535, h: 1024, alt: 'Aula naranja con mesas hexagonales', name: 'Aula 1–2 años', cap: 'Mesas y sillas a su altura.', c: '#E47C0A', ink: '#203048', tilt: '-1deg' },
   { src: I + 'cunas.jpg', w: 1536, h: 1024, alt: 'Sala de cunas', name: 'La siesta', cap: 'Cunas y penumbra.', c: '#E23200', ink: '#fff', tilt: '1deg' },
@@ -35,7 +35,7 @@ const v: any = { floats, marq, why, tour }
 <Link href="/instalaciones" className="btnP pop" style={{ textDecoration: "none", background: "#FFFFFF", color: "#203048", border: "3px solid #203048" }}>Ver instalaciones</Link>
 </div>
 <ul className="fall" style={{ animationDelay: "0.48s", listStyle: "none", margin: "10px 0 0", padding: "0", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "10px" }}>
-<li className="chip">Abiertos todo el año</li><li className="chip">Horario ampliable</li><li className="chip">Jardín privado</li>
+<li className="chip">Abiertos salvo en agosto</li><li className="chip">Horario ampliable</li><li className="chip">Jardín privado</li>
 </ul>
 <p className="fall" style={{ animationDelay: "0.57s", margin: "20px 0 0", fontWeight: "700" }}><span className="bob" aria-hidden="true">↓</span> Baja despacio</p>
 </section>

@@ -1,7 +1,7 @@
 import Micos from './components/scenes/Micos'
 import { JsonLd, meta } from './data/seo'
 
-export const metadata = meta('/', 'Guardería y escuela infantil en Guadalajara | Micos', 'Escuela infantil en Guadalajara: 6 aulas, jardín privado, cocina propia y abierta todo el año. Pide tu visita sin compromiso.')
+export const metadata = meta('/', 'Guardería y escuela infantil en Guadalajara | Micos', 'Escuela infantil en Guadalajara: 6 aulas, jardín privado, cocina propia y abierta salvo en agosto. Pide tu visita sin compromiso.')
 
 export default function Page() {
   return (

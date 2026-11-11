@@ -25,8 +25,8 @@ const v: any = { pcubes }
 <p className="fall" style={{ animationDelay: ".1s", margin: "0", fontSize: "20px" }}>Seis aulas, un jardín privado y todo lo que no se ve pero se nota. Cada sala es un cubo: baja y gira para enseñarte sus caras.</p>
 </section>
 <section className="facade" style={{ position: "relative", height: "min(90vh, 820px)", overflow: "hidden", borderBlock: "3px solid #203048" }} aria-label="Fachada de Micos">
-<img loading="lazy" decoding="async" className="zoomIn" src="/images/micos/fachada.jpg" alt="Fachada de Micos en el Bulevar del Alto Tajo" style={{ position: "absolute", inset: "0", width: "100%", height: "100%", objectFit: "cover" }} width="1447" height="1087" />
-<p className="facadeCap">Bulevar del Alto Tajo, 40 · Guadalajara</p>
+<img loading="lazy" decoding="async" className="zoomIn" src="/images/micos/fachada.jpg" alt="Fachada de Micos en el Bulevar Alto Tajo" style={{ position: "absolute", inset: "0", width: "100%", height: "100%", objectFit: "cover" }} width="1447" height="1087" />
+<p className="facadeCap">Bulevar Alto Tajo, 40 · Guadalajara</p>
 </section>
 {v.pcubes.map((pc: any, _i: number) => (<Fragment key={_i}>
 <article className="pad pcRow g2" style={{ maxWidth: "1360px", margin: "0 auto", padding: "110px 32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "56px", alignItems: "center" }}>

@@ -1,7 +1,7 @@
 export const LEGAL = {
   razon: 'Centro de Educación Infantil Micos, S.L.',
   nif: 'B19220995',
-  domicilio: 'Bulevar del Alto Tajo, 40, 19005 Guadalajara (Guadalajara, España)',
+  domicilio: 'Bulevar Alto Tajo, 40, 19005 Guadalajara (Guadalajara, España)',
   telefono: '675 733 140',
   email: 'info@micosguarderia.es',
   web: 'https://www.micosguarderia.es',

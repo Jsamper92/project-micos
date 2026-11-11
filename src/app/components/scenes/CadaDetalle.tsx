@@ -11,7 +11,7 @@ export default function CadaDetalle() {
     ['calef', 'Calefacción', 'Aulas a una temperatura constante y agradable en los inviernos de Guadalajara.', '#E47C0A', '#203048'],
     ['suelo', 'Suelo radiante', 'Gatean, juegan y se sientan en el suelo: por eso el calor sale de ahí.', '#EBC645', '#203048'],
     ['aire', 'Aire acondicionado', 'Abrimos todo el año, también en verano, con las aulas frescas.', '#FFF9EC', '#203048'],
-    ['puerta', 'Puertas pivotantes', 'Puertas antipillamientos: los dedos pequeños no se quedan atrapados.', '#E23200', '#FFFFFF']
+    ['puerta', 'Puertas pivotantes', 'Puertas pivotantes: los dedos pequeños no se quedan atrapados.', '#E23200', '#FFFFFF']
   ]
   const feats = FT.map((f, i) => {
     const on = feat.indexOf(i) >= 0

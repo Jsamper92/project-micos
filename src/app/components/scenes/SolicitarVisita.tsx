@@ -54,7 +54,7 @@ export default function SolicitarVisita() {
 <section aria-labelledby="map-t" className="fall" style={{ animationDelay: ".3s", display: "flex", flexDirection: "column", gap: "18px" }}>
 <h2 id="map-t" style={{ margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "30px" }}>Dónde estamos</h2>
 <div className="boardWrap">
-<div className="board" role="img" aria-label="Mapa: Micos está en la Bulevar del Alto Tajo, 40, junto a la Avenida de Aragón, en Guadalajara">
+<div className="board" role="img" aria-label="Mapa: Micos está en el Bulevar del Alto Tajo, 40, junto a la Avenida de Aragón, en Guadalajara">
 <svg aria-hidden="true" viewBox="0 0 600 440" preserveAspectRatio="xMidYMid slice" style={{ position: "absolute", inset: "0", width: "100%", height: "100%" }}>
 <rect width="600" height="440" fill="#FFF9EC"></rect>
 <path d="M-20 300 C 120 280, 200 340, 320 320 S 520 250, 640 270" fill="none" stroke="#203048" strokeWidth="40" strokeLinecap="round"></path>

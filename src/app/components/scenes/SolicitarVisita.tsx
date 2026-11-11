@@ -54,7 +54,7 @@ export default function SolicitarVisita() {
 <section aria-labelledby="map-t" className="fall" style={{ animationDelay: ".3s", display: "flex", flexDirection: "column", gap: "18px" }}>
 <h2 id="map-t" style={{ margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "30px" }}>Dónde estamos</h2>
 <div className="boardWrap">
-<div className="board" role="img" aria-label="Mapa: Micos está en la Avenida Bulevar del Alto Tajo, 40, junto a la Avenida de Aragón, en Guadalajara">
+<div className="board" role="img" aria-label="Mapa: Micos está en la Bulevar del Alto Tajo, 40, junto a la Avenida de Aragón, en Guadalajara">
 <svg aria-hidden="true" viewBox="0 0 600 440" preserveAspectRatio="xMidYMid slice" style={{ position: "absolute", inset: "0", width: "100%", height: "100%" }}>
 <rect width="600" height="440" fill="#FFF9EC"></rect>
 <path d="M-20 300 C 120 280, 200 340, 320 320 S 520 250, 640 270" fill="none" stroke="#203048" strokeWidth="40" strokeLinecap="round"></path>
@@ -76,7 +76,7 @@ export default function SolicitarVisita() {
 <span className="pinTag" style={{ left: "52%", top: "66%" }}>Micos</span>
 </div>
 </div>
-<address style={{ fontStyle: "normal", fontSize: "19px", fontWeight: "700" }}>Avenida Bulevar del Alto Tajo, 40<br />19005 Guadalajara</address>
+<address style={{ fontStyle: "normal", fontSize: "19px", fontWeight: "700" }}>Bulevar del Alto Tajo, 40<br />19005 Guadalajara</address>
 <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
 <a className="btnP pop" href="https://www.google.com/maps/dir/?api=1&destination=Micos+Guarder%C3%ADa+Calle+Bulevar+del+Alto+Tajo+40+19005+Guadalajara" target="_blank" rel="noopener" style={{ background: "#203048", color: "#FFF9EC" }}>Cómo llegar</a>
 <a className="btnP pop" href="https://www.google.com/maps/search/?api=1&query=Micos+Guarder%C3%ADa+Calle+Bulevar+del+Alto+Tajo+40+19005+Guadalajara" target="_blank" rel="noopener" style={{ background: "#FFFFFF", color: "#203048", border: "3px solid #203048" }}>Abrir en Google Maps</a>

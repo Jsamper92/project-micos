@@ -2,7 +2,7 @@ export const SITE = 'https://www.micosguarderia.es'
 export const NAME = 'Micos · Centro de Educación Infantil'
 export const PHONE = '+34675733140'
 export const EMAIL = 'info@micosguarderia.es'
-export const ADDRESS = { streetAddress: 'Avenida Bulevar del Alto Tajo, 40', postalCode: '19005', addressLocality: 'Guadalajara', addressRegion: 'Castilla-La Mancha', addressCountry: 'ES' }
+export const ADDRESS = { streetAddress: 'Bulevar del Alto Tajo, 40', postalCode: '19005', addressLocality: 'Guadalajara', addressRegion: 'Castilla-La Mancha', addressCountry: 'ES' }
 export const SAME_AS = [
   'https://www.instagram.com/micos.guarderia',
   'https://es-es.facebook.com/people/MICOS-Guarder%C3%ADa/100049724235252'

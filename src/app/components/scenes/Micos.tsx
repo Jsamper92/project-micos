@@ -5,22 +5,22 @@ export default function Micos() {
 const FC = ['#008FC5', '#E47C0A', '#83AF15', '#E23200', '#EBC645']
 const floats: any[] = []
 for (let i = 0; i < 12; i++) floats.push({ x: ((i * 29 + 7) % 92) + '%', y: ((i * 13 + 4) % 95) + '%', s: (36 + (i * 17) % 60) + 'px', c: FC[i % 5], f: i % 3 === 0 ? FC[(i + 2) % 5] : 'transparent', r: ((i % 2 ? 1 : -1) * (180 + i * 40)) + 'deg', dy: (-200 - (i * 53) % 400) + 'px' })
-const marqT = ['Abiertos salvo en agosto', 'Horario ampliable', 'Jardín privado', '6 aulas', 'Suelo radiante', 'Atención personalizada']
+const marqT = ['Abierto todo el año', 'Horario flexible', 'Edificio exclusivo', 'Instalaciones', 'Jardín privado', 'Suelo radiante', 'Puertas pivotantes', 'Atención personalizada']
 const marq = marqT.concat(marqT).map((t, i) => ({ t, c: FC[i % 5] }))
 const why = [
   { n: '01', t: 'Atención personalizada', d: 'Cada niño es único. Lo conocemos por su nombre y adaptamos el día a su ritmo.', c: '#0079A8', ink: '#FFFFFF', rot: '-14deg' },
   { n: '02', t: 'Casa y escuela, un entorno', d: 'Los mismos valores y educación en casa y en la escuela.', c: '#E47C0A', ink: '#203048', rot: '10deg' },
-  { n: '03', t: 'Nos adaptamos a ti', d: 'Abiertos salvo en agosto, con un horario amplio que ampliamos si lo necesitas.', c: '#83AF15', ink: '#203048', rot: '-8deg' },
-  { n: '04', t: 'Seguro y cálido', d: 'Suelo radiante, calefacción, A/A y puertas pivotantes.', c: '#EBC645', ink: '#203048', rot: '14deg' }
+  { n: '03', t: 'Nos adaptamos a ti', d: 'Abierto todo el año.', c: '#83AF15', ink: '#203048', rot: '-8deg' },
+  { n: '04', t: 'Seguro y cálido', d: 'Calefacción por suelo radiante, A/A y puertas pivotantes.', c: '#EBC645', ink: '#203048', rot: '14deg' }
 ]
 const I = '/images/micos/'
 const tour = [
-  { src: I + 'fachada.jpg', w: 1447, h: 1087, alt: 'Fachada de Micos', name: 'Edificio independiente', cap: 'Bulevar Alto Tajo, 40.', c: '#008FC5', ink: '#fff', tilt: '-1.5deg' },
-  { src: I + 'verde_pizarra.jpg', w: 1535, h: 1024, alt: 'Aula verde con pizarra, espejo y colchoneta roja', name: 'Aula verde', cap: 'Pizarra, espejo y mucha luz.', c: '#83AF15', ink: '#203048', tilt: '1.5deg' },
-  { src: I + 'naranja_mesas.jpg', w: 1535, h: 1024, alt: 'Aula naranja con mesas hexagonales', name: 'Aula 1–2 años', cap: 'Mesas y sillas a su altura.', c: '#E47C0A', ink: '#203048', tilt: '-1deg' },
-  { src: I + 'cunas.jpg', w: 1536, h: 1024, alt: 'Sala de cunas', name: 'La siesta', cap: 'Cunas y penumbra.', c: '#E23200', ink: '#fff', tilt: '1deg' },
-  { src: I + 'verde_cunas.jpg', w: 1448, h: 1086, alt: 'Aula de bebés con cunas y alfombra', name: 'Bebés', cap: 'Gateo libre sobre suelo radiante.', c: '#EBC645', ink: '#203048', tilt: '-1.5deg' },
-  { src: I + 'jardin.jpg', w: 1448, h: 1086, alt: 'Jardín privado con tobogán y mural', name: 'El jardín', cap: 'Privado, con tobogán y mural.', c: '#83AF15', ink: '#203048', tilt: '1.5deg' },
+  { src: I + 'fachada.jpg', w: 1447, h: 1087, alt: 'Fachada de Micos', name: 'Edificio independiente', c: '#008FC5', ink: '#fff', tilt: '-1.5deg' },
+  { src: I + 'verde_pizarra.jpg', w: 1535, h: 1024, alt: 'Aula verde con pizarra, espejo y colchoneta roja', name: 'Aula 2–3 años', c: '#83AF15', ink: '#203048', tilt: '1.5deg' },
+  { src: I + 'naranja_mesas.jpg', w: 1535, h: 1024, alt: 'Aula naranja con mesas hexagonales', name: 'Aula 1–2 años', c: '#E47C0A', ink: '#203048', tilt: '-1deg' },
+  { src: I + 'cunas.jpg', w: 1536, h: 1024, alt: 'Sala de cunas', name: 'Aula de 0–1 bebés', c: '#E23200', ink: '#fff', tilt: '1deg' },
+  { src: I + 'verde_cunas.jpg', w: 1448, h: 1086, alt: 'Sala de usos múltiples con cunas y alfombra', name: 'Sala de usos múltiples', c: '#EBC645', ink: '#203048', tilt: '-1.5deg' },
+  { src: I + 'jardin.jpg', w: 1448, h: 1086, alt: 'Jardín privado con tobogán y mural', name: 'El jardín', c: '#83AF15', ink: '#203048', tilt: '1.5deg' },
 ].map((t, i) => ({ ...t, n: String(i + 1) }))
 const v: any = { floats, marq, why, tour }
 
@@ -29,13 +29,13 @@ const v: any = { floats, marq, why, tour }
 
 <section className="pad" style={{ position: "relative", maxWidth: "1360px", margin: "0 auto", padding: "8px 32px 70px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: "30px" }}>
 <h1 className="fall" style={{ margin: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 30, animationDelay: "0.32s" }}><span style={{ animationDelay: "0.32s", margin: "0", fontWeight: "700", fontSize: "15px", letterSpacing: ".12em", textTransform: "uppercase" }}>Escuela infantil y guardería en Guadalajara</span><span className="sronly">: </span><span className="hT" style={{ animationDelay: "0.34s", margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "124px", lineHeight: ".86", letterSpacing: "-0.055em" }}>Una segunda familia<br />para <span style={{ display: "inline-block", background: "#EBC645", border: "3px solid #203048", padding: "0 22px 8px", borderRadius: "26px", transform: "rotate(-3deg)" }}>crecer</span></span></h1>
-<p className="fall" style={{ animationDelay: "0.39s", margin: "0", fontSize: "21px", maxWidth: "640px" }}>Cada letra de nuestro nombre es una puerta. Toca un cubo o baja: la escuela se va construyendo mientras haces scroll.</p>
+<p className="fall" style={{ animationDelay: "0.39s", margin: "0", fontSize: "21px", maxWidth: "640px" }}>Cada letra de nuestro nombre es una puerta. Toca un cubo o baja.</p>
 <div className="fall" style={{ animationDelay: "0.43s", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "14px" }}>
 <Link href="/solicitar-visita" className="btnP pop" style={{ textDecoration: "none", background: "#203048", color: "#FFF9EC" }}>Ven a conocernos</Link>
 <Link href="/instalaciones" className="btnP pop" style={{ textDecoration: "none", background: "#FFFFFF", color: "#203048", border: "3px solid #203048" }}>Ver instalaciones</Link>
 </div>
 <ul className="fall" style={{ animationDelay: "0.48s", listStyle: "none", margin: "10px 0 0", padding: "0", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "10px" }}>
-<li className="chip">Abiertos salvo en agosto</li><li className="chip">Horario ampliable</li><li className="chip">Jardín privado</li>
+<li className="chip">Abierto todo el año</li><li className="chip">Horario flexible</li><li className="chip">Jardín privado</li>
 </ul>
 <p className="fall" style={{ animationDelay: "0.57s", margin: "20px 0 0", fontWeight: "700" }}><span className="bob" aria-hidden="true">↓</span> Baja despacio</p>
 </section>
@@ -46,7 +46,7 @@ const v: any = { floats, marq, why, tour }
 </div></div>
 
 <section aria-labelledby="why-t" className="pad" style={{ position: "relative", maxWidth: "1360px", margin: "0 auto", padding: "150px 32px 120px" }}>
-<h2 id="why-t" className="sr hT2" style={{ "--rot": "-3deg", margin: "0 0 52px", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "88px", lineHeight: ".9", letterSpacing: "-0.05em", maxWidth: "900px" } as React.CSSProperties}>Por qué las familias se quedan</h2>
+<h2 id="why-t" className="sr hT2" style={{ "--rot": "-3deg", margin: "0 0 52px", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "88px", lineHeight: ".9", letterSpacing: "-0.05em", maxWidth: "900px" } as React.CSSProperties}>Porque las familias nos prefieren</h2>
 <div className="g4">
 {v.why.map((w: any, _i: number) => (<Fragment key={_i}><article className="sr" style={{ "--rot": w.rot, background: w.c, color: w.ink, border: "3px solid #203048", borderRadius: "28px", padding: "28px", minHeight: "320px", display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "20px", boxShadow: "8px 8px 0 #203048" } as React.CSSProperties}><span style={{ fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "76px", lineHeight: ".9" }}>{w.n}</span><div><h3 style={{ margin: "0 0 8px", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "30px", lineHeight: "1" }}>{w.t}</h3><p style={{ margin: "0" }}>{w.d}</p></div></article></Fragment>))}
 </div>
@@ -59,7 +59,7 @@ const v: any = { floats, marq, why, tour }
 <p style={{ margin: "0", maxWidth: "360px", fontWeight: "700" }}>Sigue bajando: la escuela pasa de lado, sala a sala.</p>
 </div>
 <div className="trackWrap"><div className="track">
-{v.tour.map((t: any, _i: number) => (<Fragment key={_i}><figure className="slide" style={{ "--tilt": t.tilt } as React.CSSProperties}><div className="slidePh" style={{ boxShadow: `14px 14px 0 ${t.c}` }}><img decoding="async" src={t.src} alt={t.alt} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} width={t.w} height={t.h} /><span className="slideNum" style={{ background: t.c, color: t.ink }}>{t.n}</span></div><figcaption style={{ display: "flex", flexDirection: "column", gap: "4px" }}><strong style={{ fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "34px", lineHeight: "1" }}>{t.name}</strong><span>{t.cap}</span></figcaption></figure></Fragment>))}
+{v.tour.map((t: any, _i: number) => (<Fragment key={_i}><figure className="slide" style={{ "--tilt": t.tilt } as React.CSSProperties}><div className="slidePh" style={{ boxShadow: `14px 14px 0 ${t.c}` }}><img decoding="async" src={t.src} alt={t.alt} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} width={t.w} height={t.h} /><span className="slideNum" style={{ background: t.c, color: t.ink }}>{t.n}</span></div><figcaption style={{ display: "flex", flexDirection: "column", gap: "4px" }}><strong style={{ fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "34px", lineHeight: "1" }}>{t.name}</strong></figcaption></figure></Fragment>))}
 </div></div>
 <div className="tourBar" aria-hidden="true"><span className="tourFill"></span></div>
 </div>
@@ -69,7 +69,7 @@ const v: any = { floats, marq, why, tour }
 <img loading="lazy" decoding="async" className="zoomIn" src="/images/micos/jardin.jpg" alt="El jardín privado de Micos, con césped, tobogán y un mural de arcoíris" style={{ position: "absolute", inset: "0", width: "100%", height: "100%", objectFit: "cover" }} width="1448" height="1086" />
 <div className="pad" style={{ position: "absolute", left: "0", right: "0", bottom: "0", padding: "48px 32px", maxWidth: "1360px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "14px" }}>
 <h2 id="jar-t" className="sr hT" style={{ "--rot": "4deg", margin: "0", background: "#FFF9EC", color: "#203048", padding: "6px 28px 16px", border: "3px solid #203048", borderRadius: "26px", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "104px", lineHeight: ".95", letterSpacing: "-0.05em" } as React.CSSProperties}>Nuestro jardín</h2>
-<p className="sr" style={{ "--rot": "-3deg", margin: "0", background: "#203048", color: "#FFF9EC", padding: "10px 18px", borderRadius: "14px", fontWeight: "700", fontSize: "19px" } as React.CSSProperties}>Privado. Solo para los niños de Micos, cada día que el tiempo lo permite.</p>
+<p className="sr" style={{ "--rot": "-3deg", margin: "0", background: "#203048", color: "#FFF9EC", padding: "10px 18px", borderRadius: "14px", fontWeight: "700", fontSize: "19px" } as React.CSSProperties}>Uso exclusivo de los niños de Micos.</p>
 </div>
 </section>
 

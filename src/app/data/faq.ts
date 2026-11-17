@@ -1,6 +1,6 @@
 export const FQ: [string, string][] = [
-  ['¿Desde qué edad puedo apuntar a mi hijo?', 'Tenemos aulas para bebés de 0 a 1 año y para niños de 1 a 2 años. Dinos la edad de tu peque y te contamos en qué aula encaja mejor.'],
-  ['¿Abrís en verano?', 'Sí, abrimos en verano. Solo cerramos en agosto. Si tienes dudas con algún día concreto, escríbenos y te lo confirmamos.'],
+  ['¿Desde qué edad puedo apuntar a mi hijo?', 'Tenemos aulas para bebés de 0 a 1 año, para niños de 1 a 2 años y para niños de 2 a 3 años. Dinos la edad de tu peque y te contamos en qué aula encaja mejor.'],
+  ['¿Abrís en verano?', 'Sí, abrimos todo el año, también en verano. Si tienes dudas con algún día concreto, escríbenos y te lo confirmamos.'],
   ['¿Puedo ampliar el horario?', 'Sí, el horario se puede ampliar si trabajas más horas de lo normal. Cuéntanos qué necesitas y lo vemos juntos.'],
   ['¿Cómo es la adaptación?', 'Cada peque va a su ritmo. Empezamos con ratos cortos y los alargamos según cómo se sienta. Hablamos contigo durante todo el proceso para ajustarlo.'],
   ['¿Cómo sé qué tal ha ido el día?', 'Al recogerle te contamos cómo ha comido, descansado y jugado. Si quieres saber algo antes, nos puedes escribir o llamar por WhatsApp.'],

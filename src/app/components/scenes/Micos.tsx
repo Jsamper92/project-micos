@@ -19,7 +19,7 @@ const tour = [
   { src: I + 'verde_pizarra.jpg', w: 1535, h: 1024, alt: 'Aula verde con pizarra, espejo y colchoneta roja', name: 'Aula 2–3 años', c: '#83AF15', ink: '#203048', tilt: '1.5deg' },
   { src: I + 'naranja_mesas.jpg', w: 1535, h: 1024, alt: 'Aula naranja con mesas hexagonales', name: 'Aula 1–2 años', c: '#E47C0A', ink: '#203048', tilt: '-1deg' },
   { src: I + 'cunas.jpg', w: 1536, h: 1024, alt: 'Sala de cunas', name: 'Aula de 0–1 bebés', c: '#E23200', ink: '#fff', tilt: '1deg' },
-  { src: I + 'verde_cunas.jpg', w: 1448, h: 1086, alt: 'Sala de usos múltiples con cunas y alfombra', name: 'Sala de usos múltiples', c: '#EBC645', ink: '#203048', tilt: '-1.5deg' },
+  { src: I + 'amarilla_c.jpg', w: 1536, h: 1024, alt: 'Sala de usos múltiples amarilla con mesas de colores junto a la salida', name: 'Sala de usos múltiples', c: '#EBC645', ink: '#203048', tilt: '-1.5deg' },
   { src: I + 'jardin.jpg', w: 1448, h: 1086, alt: 'Jardín privado con tobogán y mural', name: 'El jardín', c: '#83AF15', ink: '#203048', tilt: '1.5deg' },
 ].map((t, i) => ({ ...t, n: String(i + 1) }))
 const v: any = { floats, marq, why, tour }

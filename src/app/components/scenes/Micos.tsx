@@ -5,22 +5,21 @@ export default function Micos() {
 const FC = ['#008FC5', '#E47C0A', '#83AF15', '#E23200', '#EBC645']
 const floats: any[] = []
 for (let i = 0; i < 12; i++) floats.push({ x: ((i * 29 + 7) % 92) + '%', y: ((i * 13 + 4) % 95) + '%', s: (36 + (i * 17) % 60) + 'px', c: FC[i % 5], f: i % 3 === 0 ? FC[(i + 2) % 5] : 'transparent', r: ((i % 2 ? 1 : -1) * (180 + i * 40)) + 'deg', dy: (-200 - (i * 53) % 400) + 'px' })
-const marqT = ['Abierto todo el año', 'Horario flexible', 'Edificio exclusivo', 'Instalaciones', 'Jardín privado', 'Suelo radiante', 'Puertas pivotantes', 'Atención personalizada']
+const marqT = ['Abierto todo el año', 'Horario flexible', 'Edificio independiente', 'Jardín privado', 'Suelo radiante', 'Puertas pivotantes', 'Atención personalizada']
 const marq = marqT.concat(marqT).map((t, i) => ({ t, c: FC[i % 5] }))
 const why = [
   { n: '01', t: 'Atención personalizada', d: 'Cada niño es único. Lo conocemos por su nombre y adaptamos el día a su ritmo.', c: '#0079A8', ink: '#FFFFFF', rot: '-14deg' },
-  { n: '02', t: 'Casa y escuela, un entorno', d: 'Los mismos valores y educación en casa y en la escuela.', c: '#E47C0A', ink: '#203048', rot: '10deg' },
+  { n: '02', t: 'Casa y escuela, un entorno', d: 'Lo que cuidas en casa lo cuidamos también aquí.', c: '#E47C0A', ink: '#203048', rot: '10deg' },
   { n: '03', t: 'Nos adaptamos a ti', d: 'Abierto todo el año.', c: '#83AF15', ink: '#203048', rot: '-8deg' },
   { n: '04', t: 'Seguro y cálido', d: 'Calefacción por suelo radiante, A/A y puertas pivotantes.', c: '#EBC645', ink: '#203048', rot: '14deg' }
 ]
 const I = '/images/micos/'
 const tour = [
   { src: I + 'fachada.jpg', w: 1447, h: 1087, alt: 'Fachada de Micos', name: 'Edificio independiente', c: '#008FC5', ink: '#fff', tilt: '-1.5deg' },
-  { src: I + 'verde_pizarra.jpg', w: 1535, h: 1024, alt: 'Aula verde con pizarra, espejo y colchoneta roja', name: 'Aula 2–3 años', c: '#83AF15', ink: '#203048', tilt: '1.5deg' },
+  { src: I + 'verde_extra.jpg', w: 1200, h: 1600, alt: 'Aula 2–3 años con cunas, mesa y banderines', name: 'Aula 2–3 años', c: '#83AF15', ink: '#203048', tilt: '1.5deg' },
   { src: I + 'naranja_mesas.jpg', w: 1535, h: 1024, alt: 'Aula naranja con mesas hexagonales', name: 'Aula 1–2 años', c: '#E47C0A', ink: '#203048', tilt: '-1deg' },
   { src: I + 'cunas.jpg', w: 1536, h: 1024, alt: 'Sala de cunas', name: 'Aula de 0–1 bebés', c: '#E23200', ink: '#fff', tilt: '1deg' },
   { src: I + 'amarilla_c.jpg', w: 1536, h: 1024, alt: 'Sala de usos múltiples amarilla con mesas de colores junto a la salida', name: 'Sala de usos múltiples', c: '#EBC645', ink: '#203048', tilt: '-1.5deg' },
-  { src: I + 'jardin.jpg', w: 1448, h: 1086, alt: 'Jardín privado con tobogán y mural', name: 'El jardín', c: '#83AF15', ink: '#203048', tilt: '1.5deg' },
 ].map((t, i) => ({ ...t, n: String(i + 1) }))
 const v: any = { floats, marq, why, tour }
 
@@ -29,7 +28,7 @@ const v: any = { floats, marq, why, tour }
 
 <section className="pad" style={{ position: "relative", maxWidth: "1360px", margin: "0 auto", padding: "8px 32px 70px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: "30px" }}>
 <h1 className="fall" style={{ margin: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 30, animationDelay: "0.32s" }}><span style={{ animationDelay: "0.32s", margin: "0", fontWeight: "700", fontSize: "15px", letterSpacing: ".12em", textTransform: "uppercase" }}>Escuela infantil y guardería en Guadalajara</span><span className="sronly">: </span><span className="hT" style={{ animationDelay: "0.34s", margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "124px", lineHeight: ".86", letterSpacing: "-0.055em" }}>Una segunda familia<br />para <span style={{ display: "inline-block", background: "#EBC645", border: "3px solid #203048", padding: "0 22px 8px", borderRadius: "26px", transform: "rotate(-3deg)" }}>crecer</span></span></h1>
-<p className="fall" style={{ animationDelay: "0.39s", margin: "0", fontSize: "21px", maxWidth: "640px" }}>Cada letra de nuestro nombre es una puerta. Toca un cubo o baja.</p>
+<p className="fall" style={{ animationDelay: "0.39s", margin: "0", fontSize: "21px", maxWidth: "640px" }}>Cada letra de nuestro nombre es una puerta. Toca un cubo.</p>
 <div className="fall" style={{ animationDelay: "0.43s", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "14px" }}>
 <Link href="/solicitar-visita" className="btnP pop" style={{ textDecoration: "none", background: "#203048", color: "#FFF9EC" }}>Ven a conocernos</Link>
 <Link href="/instalaciones" className="btnP pop" style={{ textDecoration: "none", background: "#FFFFFF", color: "#203048", border: "3px solid #203048" }}>Ver instalaciones</Link>
@@ -56,7 +55,7 @@ const v: any = { floats, marq, why, tour }
 <div className="tourPin">
 <div className="pad" style={{ maxWidth: "1360px", margin: "0 auto", padding: "0 32px", width: "100%", boxSizing: "border-box", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-end", gap: "16px" }}>
 <h2 id="tour-t" className="hT2" style={{ margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "88px", lineHeight: ".88", letterSpacing: "-0.05em" }}>Conoce Micos</h2>
-<p style={{ margin: "0", maxWidth: "360px", fontWeight: "700" }}>Sigue bajando: la escuela pasa de lado, sala a sala.</p>
+<p style={{ margin: "0", maxWidth: "360px", fontWeight: "700" }}>La escuela, sala a sala.</p>
 </div>
 <div className="trackWrap"><div className="track">
 {v.tour.map((t: any, _i: number) => (<Fragment key={_i}><figure className="slide" style={{ "--tilt": t.tilt } as React.CSSProperties}><div className="slidePh" style={{ boxShadow: `14px 14px 0 ${t.c}` }}><img decoding="async" src={t.src} alt={t.alt} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} width={t.w} height={t.h} /><span className="slideNum" style={{ background: t.c, color: t.ink }}>{t.n}</span></div><figcaption style={{ display: "flex", flexDirection: "column", gap: "4px" }}><strong style={{ fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "34px", lineHeight: "1" }}>{t.name}</strong></figcaption></figure></Fragment>))}
@@ -74,16 +73,16 @@ const v: any = { floats, marq, why, tour }
 </section>
 
 <section className="pad teasers" style={{ position: "relative", maxWidth: "1360px", margin: "0 auto", padding: "140px 32px", display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: "20px" }} aria-label="Sigue explorando">
-<Link href="/cada-detalle" className="sr pop teaser" style={{ textDecoration: "none", "--rot": "-6deg", textAlign: "left", minHeight: "340px", background: "#83AF15", color: "#203048", border: "3px solid #203048", borderRadius: "32px", padding: "36px", font: "inherit", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", boxShadow: "10px 10px 0 #203048" } as React.CSSProperties}><span style={{ fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "60px", lineHeight: ".9", letterSpacing: "-0.04em" }}>Suelo radiante, jardín, puertas pivotantes…</span><span style={{ fontWeight: "700", fontSize: "19px" }}>Cada detalle cuenta →</span></Link>
-<Link href="/os-respondemos" className="sr pop teaser" style={{ textDecoration: "none", "--rot": "6deg", textAlign: "left", minHeight: "340px", background: "#C42B00", color: "#FFFFFF", border: "3px solid #203048", borderRadius: "32px", padding: "36px", font: "inherit", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", boxShadow: "10px 10px 0 #203048" } as React.CSSProperties}><span style={{ fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "60px", lineHeight: ".9", letterSpacing: "-0.04em" }}>¿Tienes dudas?</span><span style={{ fontWeight: "700", fontSize: "19px" }}>Os respondemos →</span></Link>
+<Link href="/cada-detalle" className="sr pop teaser" style={{ textDecoration: "none", "--rot": "-6deg", textAlign: "left", minHeight: "340px", background: "#83AF15", color: "#203048", border: "3px solid #203048", borderRadius: "32px", padding: "36px", font: "inherit", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", boxShadow: "10px 10px 0 #203048" } as React.CSSProperties}><span style={{ fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "60px", lineHeight: ".9", letterSpacing: "-0.04em" }}>Lo que no sale en las fotos</span><span style={{ fontWeight: "700", fontSize: "19px" }}>Cada detalle cuenta →</span></Link>
+<Link href="/os-respondemos" className="sr pop teaser" style={{ textDecoration: "none", "--rot": "6deg", textAlign: "left", minHeight: "340px", background: "#C42B00", color: "#FFFFFF", border: "3px solid #203048", borderRadius: "32px", padding: "36px", font: "inherit", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", boxShadow: "10px 10px 0 #203048" } as React.CSSProperties}><span style={{ fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "60px", lineHeight: ".9", letterSpacing: "-0.04em" }}>¿Tienes dudas?</span><span style={{ fontWeight: "700", fontSize: "19px" }}>Aquí las respondemos →</span></Link>
 </section>
 
 <section aria-labelledby="cta-t" style={{ background: "#EBC645", color: "#203048", borderTop: "3px solid #203048", position: "relative" }}>
 <div className="pad g2" style={{ maxWidth: "1360px", margin: "0 auto", padding: "140px 32px", display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "48px", alignItems: "center" }}>
 <div style={{ display: "flex", flexDirection: "column", gap: "26px", alignItems: "flex-start" }}>
 <h2 id="cta-t" className="sr hT" style={{ margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "128px", lineHeight: ".84", letterSpacing: "-0.055em" }}>Ven a conocernos</h2>
-<p className="sr" style={{ "--rot": "3deg", margin: "0", fontSize: "20px", maxWidth: "520px" } as React.CSSProperties}>30 minutos, con o sin tu peque. Te enseñamos cada rincón y conoces al equipo. Sin compromiso.</p>
-<div className="sr" style={{ "--rot": "-5deg", display: "flex", flexWrap: "wrap", gap: "14px", alignItems: "center" } as React.CSSProperties}><Link href="/solicitar-visita" className="btnP pop" style={{ textDecoration: "none", background: "#203048", color: "#FFF9EC" }}>Reservar visita</Link><a href="https://wa.me/34675733140?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20Micos." target="_blank" rel="noopener" style={{ fontWeight: "700" }}>WhatsApp</a><a href="tel:+34675733140" aria-label="Llamar a Micos al 675 733 140" style={{ fontWeight: "700" }}>675 733 140</a></div>
+<p className="sr" style={{ "--rot": "3deg", margin: "0", fontSize: "20px", maxWidth: "520px" } as React.CSSProperties}>En media hora ves la escuela por dentro y conoces al equipo. Sin compromiso.</p>
+<div className="sr" style={{ "--rot": "-5deg", display: "flex", flexWrap: "wrap", gap: "14px", alignItems: "center" } as React.CSSProperties}><Link href="/solicitar-visita" className="btnP pop" style={{ textDecoration: "none", background: "#203048", color: "#FFF9EC" }}>Solicitar visita</Link><a href="https://wa.me/34675733140?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20Micos." target="_blank" rel="noopener" style={{ fontWeight: "700" }}>WhatsApp</a><a href="tel:+34675733140" aria-label="Llamar a Micos al 675 733 140" style={{ fontWeight: "700" }}>675 733 140</a></div>
 </div>
 <div className="sr" style={{ "--rot": "8deg" } as React.CSSProperties}><img loading="lazy" decoding="async" src="/images/micos/banderola.jpg" alt="La banderola de Micos, con los cubos de colores, en la fachada de la escuela" style={{ width: "100%", aspectRatio: "4 / 5", objectFit: "cover", border: "3px solid #203048", borderRadius: "220px 220px 30px 30px", display: "block", boxShadow: "14px 14px 0 #203048" }} width="1086" height="1448" /></div>
 </div>

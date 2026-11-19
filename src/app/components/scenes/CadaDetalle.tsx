@@ -6,12 +6,12 @@ export default function CadaDetalle() {
   const [feat, setFeat] = useState<number[]>([])
   const ICONS = ['aulas', 'jardin', 'calef', 'suelo', 'aire', 'puerta']
   const FT = [
-    ['aulas', '6 aulas', 'Cada grupo de edad tiene su propio espacio, con luz natural y material a su altura.', '#008FC5', '#FFFFFF'],
-    ['jardin', 'Jardín privado', 'Juego al aire libre cada día, en un espacio que solo usan los niños de Micos.', '#83AF15', '#203048'],
+    ['aulas', 'Un aula para cada edad', 'Cada grupo de edad tiene su propio espacio, con luz natural y material a su altura.', '#008FC5', '#FFFFFF'],
+    ['jardin', 'Jardín privado', 'Juego al aire libre cada día, sin salir de la escuela.', '#83AF15', '#203048'],
     ['calef', 'Calefacción', 'Aulas a una temperatura constante y agradable en los inviernos de Guadalajara.', '#E47C0A', '#203048'],
     ['suelo', 'Suelo radiante', 'Gatean, juegan y se sientan en el suelo: por eso el calor sale de ahí.', '#EBC645', '#203048'],
-    ['aire', 'Aire acondicionado', 'Abrimos todo el año, con las aulas frescas.', '#FFF9EC', '#203048'],
-    ['puerta', 'Puertas pivotantes', 'Puertas pivotantes: los dedos pequeños no se quedan atrapados.', '#E23200', '#FFFFFF']
+    ['aire', 'Aire acondicionado', 'En verano, las aulas siguen frescas.', '#FFF9EC', '#203048'],
+    ['puerta', 'Puertas pivotantes', 'Así los dedos pequeños no se quedan atrapados.', '#E23200', '#FFFFFF']
   ]
   const feats = FT.map((f, i) => {
     const on = feat.indexOf(i) >= 0
@@ -24,7 +24,7 @@ export default function CadaDetalle() {
   return (<><main id="contenido" tabIndex={-1} className="pad" style={{ maxWidth: "1360px", margin: "0 auto", padding: "24px 32px 120px", display: "flex", flexDirection: "column", gap: "56px" }}>
 <div className="g2" style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "32px", alignItems: "end" }}>
 <h1 className="fall hT" style={{ margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "112px", lineHeight: ".84", letterSpacing: "-0.055em" }}><span style={{ display: 'block', margin: '0 0 16px', fontFamily: 'var(--font-body), system-ui, sans-serif', fontWeight: 700, fontSize: 15, lineHeight: 1.3, letterSpacing: '.12em', textTransform: 'uppercase' }}>Escuela infantil en Guadalajara</span><span className="sronly">: </span><span style={{ color: "#203048" }}>C</span>ada detalle cuenta</h1>
-<p className="fall" style={{ animationDelay: ".1s", margin: "0", fontSize: "20px" }}>Un edificio pensado para niños de verdad. Seis detalles que marcan la diferencia en el día a día de los peques.</p>
+<p className="fall" style={{ animationDelay: ".1s", margin: "0", fontSize: "20px" }}>Un edificio pensado para ellos. Seis cosas que se notan en el día a día.</p>
 </div>
 <ul className="featGrid" style={{ listStyle: "none", margin: "0", padding: "0", display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: "22px" }}>
 {v.feats.map((f: any, _i: number) => (<Fragment key={_i}>

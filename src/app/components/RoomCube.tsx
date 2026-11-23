@@ -7,7 +7,7 @@ type Face = { cls: string; img: boolean; info: boolean; bg: string; ink: string;
 type Photo = { src: string; alt: string; w: number; h: number }
 type Origin = { x: number; y: number; cs: number; m: string }
 
-const CLOSE_MS = 620
+const CLOSE_MS = 610
 
 /**
  * Cubo de una sala. Al pulsarlo se desmonta: vuela al centro, sus caras se
@@ -67,6 +67,8 @@ export default function RoomCube({ name, faces }: { name: string; faces: Face[] 
     if (!open) return
     const html = document.documentElement
     const prev = html.style.overflow
+    const prevGutter = html.style.scrollbarGutter
+    html.style.scrollbarGutter = 'stable'
     html.style.overflow = 'hidden'
     closeRef.current?.focus({ preventScroll: true })
     const onKey = (e: KeyboardEvent) => {
@@ -88,6 +90,7 @@ export default function RoomCube({ name, faces }: { name: string; faces: Face[] 
     evs.forEach((n) => box?.addEventListener(n, stop, { passive: true }))
     return () => {
       html.style.overflow = prev
+      html.style.scrollbarGutter = prevGutter
       window.removeEventListener('keydown', onKey)
       evs.forEach((n) => box?.removeEventListener(n, stop))
     }
@@ -129,7 +132,7 @@ export default function RoomCube({ name, faces }: { name: string; faces: Face[] 
           aria-modal="true"
           aria-label={`Fotos de ${name}`}
           style={{ '--x': `${origin.x}px`, '--y': `${origin.y}px`, '--cs': `${origin.cs}px`, '--m': origin.m } as React.CSSProperties}
-          onClick={(e) => { if (e.target === e.currentTarget || (e.target as HTMLElement).classList.contains('lbSlide')) closeIt() }}
+          onClick={(e) => { const c = (e.target as HTMLElement).classList; if (c.contains('lbBg') || c.contains('lbSlide') || c.contains('lbStage')) closeIt() }}
           onTouchStart={(e) => { touch.current = { x: e.touches[0].clientX, y: e.touches[0].clientY } }}
           onTouchEnd={(e) => {
             const s = touch.current
@@ -139,6 +142,7 @@ export default function RoomCube({ name, faces }: { name: string; faces: Face[] 
             if (dy > 90 && Math.abs(dx) < 60) closeIt()
           }}
         >
+          <div className="lbBg" />
           <div className="lbFly" aria-hidden="true">
             <div className="lbCube">
               {faces.map((f, i) => (

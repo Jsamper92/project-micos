@@ -28,7 +28,6 @@ const v: any = { floats, marq, why, tour }
 
 <section className="pad" style={{ position: "relative", maxWidth: "1360px", margin: "0 auto", padding: "8px 32px 70px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: "30px" }}>
 <h1 className="fall" style={{ margin: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 30, animationDelay: "0.32s" }}><span style={{ animationDelay: "0.32s", margin: "0", fontWeight: "700", fontSize: "15px", letterSpacing: ".12em", textTransform: "uppercase" }}>Escuela infantil y guardería en Guadalajara</span><span className="sronly">: </span><span className="hT" style={{ animationDelay: "0.34s", margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "124px", lineHeight: ".86", letterSpacing: "-0.055em" }}>Una segunda familia<br />para <span style={{ display: "inline-block", background: "#EBC645", border: "3px solid #203048", padding: "0 22px 8px", borderRadius: "26px", transform: "rotate(-3deg)" }}>crecer</span></span></h1>
-<p className="fall" style={{ animationDelay: "0.39s", margin: "0", fontSize: "21px", maxWidth: "640px" }}>Cada letra de nuestro nombre es una puerta. Toca un cubo.</p>
 <div className="fall" style={{ animationDelay: "0.43s", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "14px" }}>
 <Link href="/solicitar-visita" className="btnP pop" style={{ textDecoration: "none", background: "#203048", color: "#FFF9EC" }}>Ven a conocernos</Link>
 <Link href="/instalaciones" className="btnP pop" style={{ textDecoration: "none", background: "#FFFFFF", color: "#203048", border: "3px solid #203048" }}>Ver instalaciones</Link>
@@ -36,7 +35,7 @@ const v: any = { floats, marq, why, tour }
 <ul className="fall" style={{ animationDelay: "0.48s", listStyle: "none", margin: "10px 0 0", padding: "0", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "10px" }}>
 <li className="chip">Abierto todo el año</li><li className="chip">Horario flexible</li><li className="chip">Jardín privado</li>
 </ul>
-<p className="fall" style={{ animationDelay: "0.57s", margin: "20px 0 0", fontWeight: "700" }}><span className="bob" aria-hidden="true">↓</span> Baja despacio</p>
+<p className="fall" style={{ animationDelay: "0.57s", margin: "20px 0 0", fontWeight: "700" }}><span className="bob" aria-hidden="true">↓</span> Sigue bajando para conocer la escuela</p>
 </section>
 
 <div aria-hidden="true" style={{ position: "relative", background: "#203048", color: "#FFF9EC", overflow: "hidden", borderBlock: "3px solid #203048", transform: "rotate(-2deg)", margin: "0 -40px" }}>
@@ -73,7 +72,7 @@ const v: any = { floats, marq, why, tour }
 </div>
 </section>
 
-<section className="pad teasers" style={{ position: "relative", maxWidth: "1360px", margin: "0 auto", padding: "140px 32px", display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: "20px" }} aria-label="Sigue explorando">
+<section className="pad teasers" style={{ position: "relative", maxWidth: "1360px", margin: "0 auto", padding: "140px 32px", display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: "20px" }} aria-label="También te puede interesar">
 <Link href="/cada-detalle" className="sr pop teaser" style={{ textDecoration: "none", "--rot": "-6deg", textAlign: "left", minHeight: "340px", background: "#83AF15", color: "#203048", border: "3px solid #203048", borderRadius: "32px", padding: "36px", font: "inherit", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", boxShadow: "10px 10px 0 #203048" } as React.CSSProperties}><span style={{ fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "60px", lineHeight: ".9", letterSpacing: "-0.04em" }}>Lo que no sale en las fotos</span><span style={{ fontWeight: "700", fontSize: "19px" }}>Cada detalle cuenta →</span></Link>
 <Link href="/os-respondemos" className="sr pop teaser" style={{ textDecoration: "none", "--rot": "6deg", textAlign: "left", minHeight: "340px", background: "#C42B00", color: "#FFFFFF", border: "3px solid #203048", borderRadius: "32px", padding: "36px", font: "inherit", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "space-between", boxShadow: "10px 10px 0 #203048" } as React.CSSProperties}><span style={{ fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "60px", lineHeight: ".9", letterSpacing: "-0.04em" }}>¿Tienes dudas?</span><span style={{ fontWeight: "700", fontSize: "19px" }}>Aquí las respondemos →</span></Link>
 </section>

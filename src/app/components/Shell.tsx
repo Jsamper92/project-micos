@@ -20,7 +20,7 @@ export default function Shell({ header, footer, children }: { header: ReactNode;
         <div className={`ripple ${flip % 2 ? 'rB' : 'rA'}`} aria-hidden="true" style={{ top: 120, left: RIPPLE_X[sc], background: scene.bg }} />
         <div style={{ position: 'relative', zIndex: 1 }}>
           <a className="skip" href="#contenido">Saltar al contenido</a>
-          <div role="status" aria-live="polite" className="sronly">Escena: {scene.label}</div>
+          <div role="status" aria-live="polite" className="sronly">Página: {scene.label}</div>
           {adv && <AdvanceToast direction="down" label={SCENES[sc + 1].label} progress={advP} />}
           {advUp && <AdvanceToast direction="up" label={SCENES[sc - 1].label} progress={advP} />}
           {header}

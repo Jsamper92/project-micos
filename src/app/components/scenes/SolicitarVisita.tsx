@@ -16,13 +16,13 @@ export default function SolicitarVisita() {
   return (<><main id="contenido" tabIndex={-1} className="pad" style={{ maxWidth: "1360px", margin: "0 auto", padding: "24px 32px 120px", display: "flex", flexDirection: "column", gap: "56px" }}>
 <div className="g2" style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "32px", alignItems: "end" }}>
 <h1 className="fall hT" style={{ margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "112px", lineHeight: ".84", letterSpacing: "-0.055em" }}><span style={{ display: 'block', margin: '0 0 16px', fontFamily: 'var(--font-body), system-ui, sans-serif', fontWeight: 700, fontSize: 15, lineHeight: 1.3, letterSpacing: '.12em', textTransform: 'uppercase' }}>Visitar escuela infantil en Guadalajara</span><span className="sronly">: </span><span style={{ color: "#FFF9EC", WebkitTextStroke: "3px #203048" }}>S</span>olicitar visita</h1>
-<p className="fall" style={{ animationDelay: ".1s", margin: "0", fontSize: "20px" }}>Escribe tu nombre y te abrimos una conversación de WhatsApp con nosotros. Nada de formularios largos: hablamos y quedamos.</p>
+<p className="fall" style={{ animationDelay: ".1s", margin: "0", fontSize: "20px" }}>Escribe tu nombre y se abrirá WhatsApp con el mensaje ya escrito. Solo tienes que enviarlo.</p>
 </div>
 
 <div className="g2" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1.15fr)", gap: "48px", alignItems: "start" }}>
 
 <section aria-labelledby="wa-t" className="fall" style={{ animationDelay: ".15s", display: "flex", flexDirection: "column", alignItems: "center", gap: "18px" }}>
-<h2 id="wa-t" style={{ margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "30px", alignSelf: "flex-start" }}>Por WhatsApp, en 1 paso</h2>
+<h2 id="wa-t" className="sronly">Pedir visita por WhatsApp</h2>
 <div className="phone" style={{ width: "min(100%, 380px)", background: "#203048", borderRadius: "46px", padding: "12px", boxShadow: "14px 14px 0 #E23200", boxSizing: "border-box" }}>
 <div style={{ background: "#EFE7DC", borderRadius: "36px", overflow: "hidden", display: "flex", flexDirection: "column", height: "600px" }}>
 <div style={{ background: "#075E54", color: "#FFFFFF", padding: "18px 18px 14px", display: "flex", alignItems: "center", gap: "12px" }}>
@@ -30,7 +30,7 @@ export default function SolicitarVisita() {
 <span style={{ display: "flex", flexDirection: "column", lineHeight: "1.2" }}><strong style={{ fontSize: "16px" }}>Micos Guardería</strong><span style={{ fontSize: "13px", opacity: ".85" }}>{v.waStatus}</span></span>
 </div>
 <div aria-live="polite" style={{ flex: "1", padding: "18px 14px", display: "flex", flexDirection: "column", gap: "10px", overflow: "hidden" }}>
-<p style={{ margin: "0 auto 6px", background: "#FFF6D6", color: "#5A4A1A", fontSize: "12px", padding: "5px 10px", borderRadius: "8px", textAlign: "center", maxWidth: "90%" }}>Vista previa · el mensaje se abrirá en tu WhatsApp</p>
+<p style={{ margin: "0 auto 6px", background: "#FFF6D6", color: "#5A4A1A", fontSize: "12px", padding: "5px 10px", borderRadius: "8px", textAlign: "center", maxWidth: "90%" }}>Así quedará tu mensaje de WhatsApp</p>
 <div className="bubbleIn" style={{ alignSelf: "flex-start", maxWidth: "82%", background: "#FFFFFF", color: "#111", borderRadius: "4px 16px 16px 16px", padding: "10px 12px", fontSize: "15px", boxShadow: "0 1px 1px rgba(0,0,0,.12)" }}>¡Hola! Somos Micos. ¿Cómo te llamas? Así sabemos con quién hablamos.<span style={{ display: "block", textAlign: "right", fontSize: "11px", color: "#667" }}>09:00</span></div>
 {v.hasName && (<>
 <div className={v.bubbleCls} style={{ alignSelf: "flex-end", maxWidth: "86%", background: "#D9FDD3", color: "#111", borderRadius: "16px 4px 16px 16px", padding: "10px 12px", fontSize: "15px", boxShadow: "0 1px 1px rgba(0,0,0,.12)" }}>{v.waMsg}<span style={{ display: "flex", justifyContent: "flex-end", gap: "4px", fontSize: "11px", color: "#667" }}>ahora</span></div>

@@ -45,7 +45,8 @@ const v: any = { floats, marq, why, tour }
 </div></div>
 
 <section aria-labelledby="why-t" className="pad" style={{ position: "relative", maxWidth: "1360px", margin: "0 auto", padding: "150px 32px 120px" }}>
-<h2 id="why-t" className="sr hT2" style={{ "--rot": "-3deg", margin: "0 0 52px", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "88px", lineHeight: ".9", letterSpacing: "-0.05em", maxWidth: "900px" } as React.CSSProperties}>Porque las familias nos prefieren</h2>
+<h2 id="why-t" className="sr hT2" style={{ "--rot": "-3deg", margin: "0 0 20px", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "88px", lineHeight: ".9", letterSpacing: "-0.05em", maxWidth: "900px" } as React.CSSProperties}>Porque las familias nos prefieren</h2>
+<p className="sr" style={{ margin: "0 0 52px", fontSize: "24px", fontWeight: "700", maxWidth: "900px" }}>20 años cuidando a los peques de Guadalajara.</p>
 <div className="g4">
 {v.why.map((w: any, _i: number) => (<Fragment key={_i}><article className="sr" style={{ "--rot": w.rot, background: w.c, color: w.ink, border: "3px solid #203048", borderRadius: "28px", padding: "28px", minHeight: "320px", display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "20px", boxShadow: "8px 8px 0 #203048" } as React.CSSProperties}><span style={{ fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "76px", lineHeight: ".9" }}>{w.n}</span><div><h3 style={{ margin: "0 0 8px", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "30px", lineHeight: "1" }}>{w.t}</h3><p style={{ margin: "0" }}>{w.d}</p></div></article></Fragment>))}
 </div>

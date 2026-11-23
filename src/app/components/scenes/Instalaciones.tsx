@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import Link from 'next/link'
+import RoomCube from '../RoomCube'
 
 export default function Instalaciones() {
 const I = '/images/micos/'
@@ -30,9 +31,7 @@ const v: any = { pcubes }
 </section>
 {v.pcubes.map((pc: any, _i: number) => (<Fragment key={_i}>
 <article className="pad pcRow g2" style={{ maxWidth: "1360px", margin: "0 auto", padding: "110px 32px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "56px", alignItems: "center" }}>
-<div className="pcWrap" style={{ order: pc.o1 }}><div className="pcube" role="img" aria-label={`${pc.name}: cubo 3D con fotos`}>
-{pc.faces.map((f: any, _i: number) => (<Fragment key={_i}><div className={`pf ${f.cls}`} style={{ background: f.bg, color: f.ink }}>{f.img && (<><img loading="lazy" decoding="async" src={f.src} alt={f.alt} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} width={f.w} height={f.h} /></>)}{f.info && (<><span style={{ padding: "24px", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "34px", lineHeight: "1" }}>{f.title}</span></>)}</div></Fragment>))}
-</div></div>
+<div style={{ order: pc.o1, minWidth: "0" }}><RoomCube name={pc.name} faces={pc.faces} /></div>
 <div className="sr" style={{ order: pc.o2, "--rot": pc.rot, display: "flex", flexDirection: "column", gap: "18px", minWidth: "0" } as React.CSSProperties}>
 <p style={{ margin: "0", fontWeight: "700", fontSize: "14px", letterSpacing: ".1em", textTransform: "uppercase" }}>{pc.tag}</p>
 <h2 className="hT2" style={{ margin: "0", fontFamily: "var(--font-display), sans-serif", fontWeight: "800", fontSize: "76px", lineHeight: ".9", letterSpacing: "-0.05em" }}>{pc.name}</h2>

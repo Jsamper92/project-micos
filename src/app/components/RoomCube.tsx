@@ -5,7 +5,7 @@ import { createPortal } from 'react-dom'
 
 type Face = { cls: string; img: boolean; info: boolean; bg: string; ink: string; src: string; alt: string; title: string; w: number; h: number }
 type Photo = { src: string; alt: string; w: number; h: number }
-type Origin = { x: number; y: number; cs: number; m: string }
+type Origin = { l: number; t: number; dx: number; dy: number; cs: number; m: string }
 
 const CLOSE_MS = 610
 
@@ -35,8 +35,11 @@ export default function RoomCube({ name, faces }: { name: string; faces: Face[] 
     setIdx(0)
     setClosing(false)
     setOrigin({
-      x: b.left + b.width / 2 - window.innerWidth / 2,
-      y: b.top + b.height / 2 - window.innerHeight / 2,
+      // posición exacta del cubo en pantalla: ahí nace y ahí vuelve la copia
+      l: b.left + b.width / 2,
+      t: b.top + b.height / 2,
+      dx: document.documentElement.clientWidth / 2 - (b.left + b.width / 2),
+      dy: window.innerHeight / 2 - (b.top + b.height / 2),
       cs: el.offsetWidth,
       m: m && m !== 'none' ? m : 'rotateX(-12deg) rotateY(-18deg)',
     })
@@ -107,7 +110,7 @@ export default function RoomCube({ name, faces }: { name: string; faces: Face[] 
     <>
       <div
         ref={wrapRef}
-        className="pcWrap pcBtn"
+        className="pcBtn"
         role="button"
         tabIndex={0}
         aria-haspopup="dialog"
@@ -115,7 +118,8 @@ export default function RoomCube({ name, faces }: { name: string; faces: Face[] 
         onClick={openIt}
         onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openIt() } }}
       >
-        <div ref={cubeRef} className="pcube" style={{ opacity: open ? 0 : 1 }}>
+        <div className="pcWrap">
+        <div ref={cubeRef} className="pcube" style={{ visibility: open ? 'hidden' : 'visible' }}>
           {faces.map((f) => (
             <div key={f.cls} className={`pf ${f.cls}`} style={{ background: f.bg, color: f.ink }}>
               {f.img && <img loading="lazy" decoding="async" src={f.src} alt={f.alt} width={f.w} height={f.h} />}
@@ -123,6 +127,8 @@ export default function RoomCube({ name, faces }: { name: string; faces: Face[] 
             </div>
           ))}
         </div>
+        </div>
+        <span className="pcHint" aria-hidden="true"><span className="pcHintIco" />{photos.length > 1 ? `Ver las ${photos.length} fotos` : 'Ver la foto'}</span>
       </div>
       {origin && createPortal(
         <div
@@ -131,7 +137,7 @@ export default function RoomCube({ name, faces }: { name: string; faces: Face[] 
           role="dialog"
           aria-modal="true"
           aria-label={`Fotos de ${name}`}
-          style={{ '--x': `${origin.x}px`, '--y': `${origin.y}px`, '--cs': `${origin.cs}px`, '--m': origin.m } as React.CSSProperties}
+          style={{ '--l': `${origin.l}px`, '--t': `${origin.t}px`, '--x': `${origin.dx}px`, '--y': `${origin.dy}px`, '--cs': `${origin.cs}px`, '--m': origin.m } as React.CSSProperties}
           onClick={(e) => { const c = (e.target as HTMLElement).classList; if (c.contains('lbBg') || c.contains('lbSlide') || c.contains('lbStage')) closeIt() }}
           onTouchStart={(e) => { touch.current = { x: e.touches[0].clientX, y: e.touches[0].clientY } }}
           onTouchEnd={(e) => {
@@ -148,6 +154,7 @@ export default function RoomCube({ name, faces }: { name: string; faces: Face[] 
               {faces.map((f, i) => (
                 <div key={f.cls} className={`pf ${f.cls} lbF${i}`} style={{ background: f.bg, color: f.ink }}>
                   {f.img && <img src={f.src} alt="" width={f.w} height={f.h} />}
+                  {f.info && <span style={{ padding: '24px', fontFamily: 'var(--font-display), sans-serif', fontWeight: 800, fontSize: '34px', lineHeight: 1 }}>{f.title}</span>}
                 </div>
               ))}
             </div>

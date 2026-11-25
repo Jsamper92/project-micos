@@ -60,7 +60,7 @@ a{color:inherit}
 .slideNum{position:absolute;left:18px;top:18px;width:58px;height:58px;display:grid;place-items:center;border:3px solid #203048;border-radius:10px;font-family:var(--font-display),sans-serif;font-weight:800;font-size:28px}
 .tourBar{margin:0 auto;width:min(420px,70vw);height:12px;border:3px solid #203048;border-radius:99px;overflow:hidden;background:#FFF9EC}
 .tourFill{display:block;height:100%;background:#E23200;transform-origin:left;transform:scaleX(.08)}
-.pcWrap{perspective:1500px;display:grid;place-items:center;height:calc(var(--cs)*1.55)}
+.pcWrap{position:relative;z-index:1;perspective:1500px;display:grid;place-items:center;height:calc(var(--cs)*1.55)}
 .pcube{--cs:clamp(220px,27vw,400px);position:relative;width:var(--cs);height:var(--cs);transform-style:preserve-3d;transform:rotateX(-12deg) rotateY(-18deg)}
 .pf:has(img)::after{content:"";position:absolute;right:14px;bottom:14px;width:38px;height:38px;border:3px solid #203048;border-radius:10px;background:conic-gradient(#008FC5 0 25%,#E47C0A 0 50%,#83AF15 0 75%,#E23200 0);box-shadow:3px 3px 0 #203048;z-index:2}
 .facade{position:relative;isolation:isolate}
@@ -188,7 +188,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid curre
 /* Galería de sala: el cubo se desmonta y deja paso a las fotos */
 .pcBtn{cursor:zoom-in;outline-offset:8px;border-radius:24px;display:flex;flex-direction:column;align-items:center;gap:34px;-webkit-tap-highlight-color:transparent}
 .pcBtn:focus:not(:focus-visible){outline:none}
-.pcHint{display:inline-flex;align-items:center;gap:10px;background:#203048;color:#FFF9EC;border:3px solid #203048;border-radius:999px;padding:11px 20px;font-weight:700;font-size:16px;box-shadow:4px 4px 0 #EBC645;transition:transform .15s}
+.pcHint{position:relative;z-index:5;display:inline-flex;align-items:center;gap:10px;background:#203048;color:#FFF9EC;border:3px solid #203048;border-radius:999px;padding:11px 20px;font-weight:700;font-size:16px;box-shadow:4px 4px 0 #EBC645;transition:transform .15s}
 .pcBtn:hover .pcHint{transform:translateY(-2px)}.pcBtn:active .pcHint{transform:translateY(2px)}
 .pcHintIco{width:18px;height:18px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFF9EC' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7'/%3E%3C/svg%3E") center/contain no-repeat}
 .pf:has(img)::after{background:#FFF9EC url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23203048' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7'/%3E%3C/svg%3E") center/20px no-repeat}
